@@ -1,6 +1,7 @@
 ## Project proposal
 
-# Team name
+# Red Team
+
 
 # Name of team members
 
@@ -9,6 +10,9 @@
 - Valentin Georigiev
 
 # Description
+
+The goal of our project is to create a storefront for a grocery store which will sell a variety of different foods
+by category and has an easy to use web interface. Our clientele is anyone who wishes to buy food.
 
 # Implementations
 
