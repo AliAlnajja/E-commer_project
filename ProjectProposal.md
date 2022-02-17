@@ -16,23 +16,23 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 # Implementations
 
 - Sign-in/sign-out or create account with 2FA (does not count)
-- Customer can customize their account (4)[^1]
-- Product page with details (1)
-- Customer can review product (1)[^2]
-- Sort by price, categories, alphabetically, number of reviews or ratings (5)
-- Page numbers at the bottom for easy browsing (1)[^3]
-- Can create or delete multiple wishlists (2)
-- Can add, delete products in wishlist (3) -> (2)[^4]
-- Add/remove/update a product's quantity to cart system or "Buy now" button (4)[^5]
-- Checkout ~~system~~ (1)
-- Search ~~bar~~ (1)
-- Light or Dark mode (~~2~~1)
-- Recommendations/trending/sales on products on the homepage (3)
-- "Go back up" feature when you scroll far down (1)
+- Customer can customize their account (4)[^1] -> Username (Alex) -> the rest Valentin
+- Product page with details (1) -> Ali
+- Customer can review product (1)[^2] -> Alex
+- Sort by price, categories, alphabetically, number of reviews or ratings (5) -> Alex
+- Page numbers at the bottom for easy browsing (1)[^3] -> Alex
+- Can create or delete multiple wishlists (2) -> Ali
+- Can add, delete products in wishlist (3) -> (2)[^4] -> Valentin
+- Add/remove/update a product's quantity to cart system or "Buy now" button (4)[^5] -> Ali
+- Checkout ~~system~~ (1) -> Valentin
+- Search ~~bar~~ (1) -> Alex
+- Light or Dark mode (~~2~~1) -> Ali
+- Recommendations/trending/sales on products on the homepage (3) -> Valentin
+- "Go back up" feature when you scroll far down (1) -> Alex
 - ~~Logo is home button (1)~~[^6]
 - ~~Store locations on the website (1)~~[^7]
-- Delivery or pick-up options (2)[^8]
-- Contact us page where the customer can send direct email to our store. (1)
+- Delivery or pick-up options (2)[^8] -> Ali
+- Contact us page where the customer can send direct email to our store. (1) -> Valentin
   [^9]
 
 [^1]: How? -> The customer can basically change his address (add or delete), username and password so it is 4.
