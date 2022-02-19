@@ -1,4 +1,4 @@
-feature : updatePassword
+Feature : updatePassword
   In order to update my password
   As a user 
   I need to be able to view my profile
