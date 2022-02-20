@@ -16,7 +16,7 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 # Implementations
 
 - Sign-in/sign-out or create account with 2FA (does not count)
-- Customer can customize their account (4)[^1] -> Username (Alex) -> the rest Valentin
+- Customer can customize their account (5)[^1] -> Username (Alex) -> Update address (Ali) -> the rest Valentin
 - Product page with details (1) -> Ali
 - Customer can review product (1)[^2] -> Alex
 - Sort by price, categories, alphabetically, number of reviews or ratings (5) -> Alex
@@ -29,13 +29,14 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 - Light or Dark mode (~~2~~1) -> Ali
 - Recommendations/trending/sales on products on the homepage (3) -> Valentin
 - "Go back up" feature when you scroll far down (1) -> Alex
+- Newsletter subscription feature (1) -> Ali
 - ~~Logo is home button (1)~~[^6]
 - ~~Store locations on the website (1)~~[^7]
-- Delivery or pick-up options (2)[^8] -> Ali
+- ~~Delivery or pick-up options (2)~~ [^8] -> Ali
 - Contact us page where the customer can send direct email to our store. (1) -> Valentin
   [^9]
 
-[^1]: How? -> The customer can basically change his address (add or delete), username and password so it is 4.
+[^1]: How? -> The customer can basically change his address (add, delete and update), username and password so it is 5 features.
 [^2]: Only products that they have previously purchased. -> Yes.
 [^3]: Here you are talking about pagination of listings? You may phrase this as a selection of 10, 20, or 40 items per page as well. -> Yes, we are talking about pagination where there is a prev 1, 2, 3, 4 ... 9 and a next button, there is also a fixed amount of items per page.
 [^4]: How do you update an item in a wishlist? Usually, one can only add and delete. -> Good question.
