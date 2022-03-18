@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="/styles/darkmode.css">
+<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 <style>
 .header {
 	overflow: hidden;
@@ -21,7 +21,7 @@
 }
 
 div.button {
-	float: right;
+	align-items: center;
 }
 
 </style>
