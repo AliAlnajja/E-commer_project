@@ -19,3 +19,8 @@ h1, p {
 form {
 	color: var(--text-color);
 }
+
+table {
+	color: var(--text-color);
+	color: red;
+}
