@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 <style>
 .header {
 	overflow: hidden;
@@ -19,26 +20,51 @@
 	margin-right: 10px;
 }
 
+div.button {
+	align-items: center;
+}
+
 </style>
+</body>
+	<div class="header">
+		<div class="left">
+			<a href='/Main/index'>Home</a>
+			<a href='/Items/index'>Browse products</a>
+			<a href='/Recommendations/index'>Browse recommended products</a>
 
-<div class="header">
-	<div class="left">
-		<a href='/Main/index'>Home</a>
-		<a href='/Items/index'>Browse products</a>
-		<a href='/Recommendations/index'>Browse recommended products</a>
+		</div>
 
-	</div>
+		<div class="right">
+			<?php if (!isset($_SESSION['user_id'])) { ?>
+				<a href='/User/register'>Register</a>
+				<a href='/User/login'>Log in</a>
+				<div class="button"> 
+					<button class="btn-toggle">Dark-Mode</button>
+				</div>
+			<?php } else { ?>
+				<a href='/User/logout'>Log out</a>
+				<?php $user_id = $_SESSION['user_id']; ?>
+				<a href='/User/index'>Account</a>
+				<p>Hello, <?php echo $_SESSION['username'];?>.</p>
+				<?php } ?>	
+		</div>
+	</div> 
+</body>
 
-	<div class="right">
-		<?php if (!isset($_SESSION['user_id'])) { ?>
-			<a href='/User/register'>Register</a>
-			<a href='/User/login'>Log in</a>
-		<?php } else { ?>
-			<a href='/User/logout'>Log out</a>
-			<?php $user_id = $_SESSION['user_id']; ?>
-			<a href='/User/index'>Account</a>
-			<p>Hello, <?php echo $_SESSION['username'];?>.</p>
-			<?php } ?>
-			
-	</div>
-</div> 
+<script>
+	const btn = document.querySelector(".btn-toggle");
+	const currentTheme = localStorage.getItem("theme");
+	if (currentTheme == "dark") {
+  		document.body.classList.add("dark-theme");
+	}
+
+	btn.addEventListener("click", function () {
+  	document.body.classList.toggle("dark-theme");
+
+  	let theme = "light";
+  	if (document.body.classList.contains("dark-theme")) {
+    	theme = "dark";
+  	}
+  		localStorage.setItem("theme", theme);
+	});
+</script>

@@ -12,10 +12,11 @@
 			$this->view('shared/header');
 		?>
 
-	<h1>Update Account</h1>
+	<h1>Update password</h1>
 		<form method='post' action=''>
-			<label class='form-label'>Email:<input type='text' name='email' class='form-control' value='<?= $data->email?>' /></label> <br>
-			<label class='form-label'>Address:<input type='text' name='address' class='form-control' value='<?= $data->address?>' /></label> <br>
+			<label class='form-label'>Old password:<input type='password' name='oldPassword' required='required' class='form-control' /></label> <br>
+			<label class='form-label'>New password:<input type='password' name='newPassword' required='required' class='form-control' /></label> <br>
+			<label class='form-label'>Confirm new password:<input type='password' name='confirm' required='required' class='form-control' /></label> <br>
 			<input type="submit" name='action' value='Update' class='form-control' />
 		</form>
 	</div>
