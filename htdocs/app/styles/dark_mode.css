@@ -5,7 +5,8 @@ body {
 
 body.dark-theme {
 	--text-color: #eee;
-	--bkg-color:  #121212;
+	--bkg-color:  #282a36;
+	--header-color: #ffb86c;
 }
 
 body {
@@ -26,4 +27,8 @@ table {
 
 th, td {
 	color: var(--text-color);
+}
+
+div.header {
+	background: var(--header-color);
 }
