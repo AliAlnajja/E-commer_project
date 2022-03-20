@@ -13,9 +13,10 @@
 			$this->view('shared/header');
 		?>
 
-	<h1>Update Account</h1>
+	<h1>Update details</h1>
 		<form method='post' action=''>
-			<label class='form-label'>Email:<input type='text' name='email' class='form-control' value='<?= $data->email?>' /></label> <br>
+			<label class='form-label'>Username:<input type='text' name='username' required='required' class='form-control' value='<?= $data->username?>' /></label> <br>
+			<label class='form-label'>Email:<input type='text' name='email' required='required' class='form-control' value='<?= $data->email?>' /></label> <br>
 			<label class='form-label'>Address:<input type='text' name='address' class='form-control' value='<?= $data->address?>' /></label> <br>
 			<input type="submit" name='action' value='Update' class='form-control' />
 		</form>
