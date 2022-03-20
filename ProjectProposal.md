@@ -33,7 +33,7 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 - ~~Logo is home button (1)~~[^6]
 - ~~Store locations on the website (1)~~[^7]
 - ~~Delivery or pick-up options (2)~~ [^8] -> Ali
-- Contact us page where the customer can send direct email to our store. (1) -> Valentin
+- Contact us page where the customer can send direct email to our store. (1) -> Valentin						
   [^9]
 
 [^1]: How? -> The customer can basically change his address (add, delete and update), username and password so it is 5 features.
