@@ -31,6 +31,7 @@ div.button {
 			<a href='/Main/index'>Home</a>
 			<a href='/Items/index'>Browse products</a>
 			<a href='/Recommendations/index'>Browse recommended products</a>
+			<a href='/Newsletter/index'>Newsletter</a>
 
 		</div>
 
