@@ -11,11 +11,8 @@
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		<h1>Home</h1>
-		<p>Welcome to our website</p>
-		
+		<p>Welcome to our website</p>	
 		<?php $this->view('shared/toTop'); ?>
-		
 	</div>
-
 </body>
 </html>
