@@ -1,0 +1,34 @@
+body {
+	--text-color: #222;
+	--bkg-color: #fff;
+}
+
+body.dark-theme {
+	--text-color: #eee;
+	--bkg-color:  #282a36;
+	--header-color: #ffb86c;
+}
+
+body {
+	background: var(--bkg-color);
+}
+
+h1, p {
+	color: var(--text-color);
+}
+
+form {
+	color: var(--text-color);
+}
+
+table {
+	color: var(--text-color);
+}
+
+th, td {
+	color: var(--text-color);
+}
+
+div.header {
+	background: var(--header-color);
+}
