@@ -39,6 +39,9 @@
 				}
 		
 		?>
+		
+		<?php $this->view('shared/toTop'); ?>
+		
 	</div>
 </body>
 </html>
