@@ -8,5 +8,4 @@ class Wishlist extends \app\core\Controller{
 		$items = $recommendations->getAll();
 		$this->view('Wishlist/index',$items);
 	}
-
 }

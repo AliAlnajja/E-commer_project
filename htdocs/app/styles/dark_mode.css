@@ -22,5 +22,8 @@ form {
 
 table {
 	color: var(--text-color);
-	color: red;
+}
+
+th, td {
+	color: var(--text-color);
 }
