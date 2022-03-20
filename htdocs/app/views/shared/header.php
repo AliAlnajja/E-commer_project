@@ -24,14 +24,18 @@ div.button {
 	align-items: center;
 }
 
+
+
+
 </style>
 </body>
 	<div class="header">
 		<div class="left">
 			<a href='/Main/index'>Home</a>
-			<a href='/Items/index'>Browse products</a>
-			<a href='/Recommendations/index'>Browse recommended products</a>
+			<a href='/Items/index'>Browse Products</a>
+			<a href='/Recommendations/index'>Browse Recommended Products</a>
 			<a href='/Newsletter/index'>Newsletter</a>
+			<a href='/Contact/index'>Contact Us</a>
 
 		</div>
 
@@ -44,7 +48,7 @@ div.button {
 				</div>
 			<?php } else { ?>
 				<a href='/User/logout'>Log out</a>
-				<?php $user_id = $_SESSION['user_id']; ?>
+				<?php $user_id = $_SESSION['user_id']; ?> 
 				<a href='/User/index'>Account</a>
 				<p>Hello, <?php echo $_SESSION['username'];?>.</p>
 				<?php } ?>	

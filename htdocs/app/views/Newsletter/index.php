@@ -27,6 +27,11 @@
 		
 		<br>
 		<div class="form-cont">
+			<?php if(isset($_GET['err'])) {?>
+				<p class="text-danger"><?php echo $_GET['err']; ?></p>
+			<?php } else if(isset($_GET['msg'])) {?>
+				<p class="text-success"><?php echo $_GET['msg']; ?></p>
+			<?php }?>
 			<form method="post" action='/Newsletter/create'>
 				<label>First Name <input type="text" name="first_name" required class="form-control mt-2"></label>
 				<label>Last Name <input type="text" name="last_name" required class="form-control mt-2"></label>
@@ -34,6 +39,7 @@
 				<label>Phone<input type="text" name="phone" class="form-control mt-2"></label>
 				<br>
 				<input type="submit" name="action" value="submit" class="btn btn-info mt-2 btn-block">
+				<input type="button" name="action" value="see if your subscribed" class="btn btn-info mt-2 btn-block">
 			</form>
 		</div>
 	</div>
