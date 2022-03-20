@@ -8,10 +8,10 @@ class User extends \app\core\Model {
 	}
 
 	function exists() { //returns false if the record does not exist and true otherwise
-		return $this->get($this->username) != false;
+		return $this->getFromUsername($this->username) != false;
 	}
 
-	function get($username) {
+	function getFromUsername($username) {
 		$SQL = 'SELECT * FROM user WHERE username = :username';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['username'=>$username]);
@@ -19,9 +19,9 @@ class User extends \app\core\Model {
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\User");
 		return $STMT->fetch();
 	}
-	
-	function getUsername($user_id) {
-		$SQL = 'SELECT username FROM user WHERE user_id = :user_id';
+
+	function getFromUserId($user_id) {
+		$SQL = 'SELECT * FROM user WHERE user_id = :user_id';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['user_id'=>$user_id]);
 		//TODO:add something here to make the return types cooler
@@ -34,11 +34,23 @@ class User extends \app\core\Model {
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['username'=>$this->username, 'password_hash'=>$this->password_hash, 'email'=>$this->email, 'address'=>$this->address]);
 	}
-
-	function update(){
-		$SQL = 'UPDATE user SET password = :password, email = :email, address = :address WHERE user_id = :user_id';
+	
+	function updateDetails() {
+		$SQL = 'UPDATE user SET username = :username, email = :email, address = :address WHERE user_id = :user_id';
 		$STMT = self::$_connection->prepare($SQL);
-		$STMT->execute(['password'=>$this->password, 'email'=>$this->email, 'address'=>$this->address, 'user_id'=>$this->user_id]);
+		$STMT->execute(['username'=>$this->username, 'email'=>$this->email, 'address'=>$this->address, 'user_id'=>$this->user_id]);
+	}
+	
+	function updatePassword() {
+		$SQL = 'UPDATE user SET password_hash = :password_hash WHERE user_id = :user_id';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['password_hash'=>$this->password_hash, 'user_id'=>$this->user_id]);
+	}
+	
+	function removeAddress($user_id) {
+		$SQL = 'UPDATE user SET address = NULL WHERE user_id = :user_id';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['user_id'=>$user_id]);
 	}
 	
 	function searchBar($text){

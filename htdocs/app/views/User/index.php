@@ -12,12 +12,16 @@
 		<?php $this->view('shared/header'); ?>
 		<h1>Account</h1> <br>
 		<table>
-			<tr><th>Username&emsp;</th> <th>Email&emsp;</th> <th>Address&emsp;</th></tr>
+			<tr><th>Username&emsp;</th> <th>Email</th> <th>&emsp;Address</th></tr>
 			<?php 
-				echo "<td>$data->username</td> <td>$data->email</td> <td>$data->address</td>";
+				echo "<td>$data->username</td> <td>$data->email</td> <td>&emsp;$data->address</td>";
 			?>
 		</table> <br>
-		<?php echo "<a href='/User/update/$data->user_id'>Update account</a>" ?>
+		<?php 
+			echo "<a href='/User/update_details/$data->user_id'>Update details</a>&emsp;";
+			echo "<a href='/User/update_password/$data->user_id'>Update password</a> &emsp;";
+			echo "<a href='/User/remove_address/$data->user_id'>Remove address</a> &emsp;";
+		?>
 		
 	</div>
 </body>
