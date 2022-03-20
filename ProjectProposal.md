@@ -34,7 +34,7 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 - ~~Store locations on the website (1)~~[^7]
 - ~~Delivery or pick-up options (2)~~ [^8] -> Ali
 - Contact us page where the customer can send direct email to our store. (1) -> Valentin
-  [^9]
+  [^9]  DONE
 
 [^1]: How? -> The customer can basically change his address (add, delete and update), username and password so it is 5 features.
 [^2]: Only products that they have previously purchased. -> Yes.
