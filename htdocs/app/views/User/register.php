@@ -20,7 +20,7 @@
 		<label class='form-label'>Password confirmation:<input type='password' required='required' name='password_confirm' class='form-control' /></label><br>
 		<input type="submit" name='action' value='Register' class='form-control' />
 	</form>
-	<p> Already have an account? <a href="/User/index">Login here.</a></p>
+	<p> Already have an account? <a href="/User/login">Login here.</a></p>
 	</div>
 </body>
 </html>
