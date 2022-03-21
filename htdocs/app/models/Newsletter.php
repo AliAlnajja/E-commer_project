@@ -11,9 +11,25 @@ class Newsletter extends \app\core\Model {
 		$SQL = 'SELECT * FROM newsletter';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute();
-		//TODO:add something here to make the return types cooler
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Newsletter");
 		return $STMT->fetchAll();
+	}
+
+	function get($newsletter_id){
+		$SQL = 'SELECT * FROM newsletter WHERE newsletter_id = :newsletter_id';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['newsletter_id'=>$newsletter_id]);
+		//TODO:add something here to make the return types cooler
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Newsletter");
+		return $STMT->fetch();
+	}
+
+	function getEmail($email) {
+		$SQL = 'SELECT * FROM newsletter WHERE email = :email';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['email'=>$email]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Newsletter");
+		return $STMT->fetch();
 	}
 	
 	function insert(){
