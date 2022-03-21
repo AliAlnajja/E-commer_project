@@ -15,8 +15,8 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 
 # Implementations
 
-- Sign-in/sign-out or create account with 2FA (does not count) 													DONE
-- Customer can customize their account (5)[^1] -> Username (Alex) -> Update address (Ali) -> the rest Valentin 	DONE
+- Sign-in/sign-out or create account with 2FA (does not count) DONE
+- Customer can customize their account (5)[^1] -> Username (Alex) -> Update address (Ali) -> the rest Valentin DONE
 - Product page with details (1) -> Ali
 - Customer can review product (1)[^2] -> Alex
 - Sort by price, categories, alphabetically, number of reviews or ratings (5) -> Alex
@@ -25,16 +25,16 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 - Can add, delete products in wishlist (3) -> (2)[^4] -> Valentin
 - Add/remove/update a product's quantity to cart system or "Buy now" button (4)[^5] -> Ali
 - Checkout ~~system~~ (1) -> Valentin
-- Search ~~bar~~ (1) -> Alex 																					DONE
-- Light or Dark mode (~~2~~1) -> Ali 																			DONE
+- Search ~~bar~~ (1) -> Alex DONE
+- Light or Dark mode (~~2~~1) -> Ali DONE
 - Recommendations/trending/sales on products on the homepage (3) -> Valentin
-- "Go back up" feature when you scroll far down (1) -> Alex														DONE
-- Newsletter subscription feature (1) -> Ali																	DONE
+- "Go back up" feature when you scroll far down (1) -> Alex DONE
+- Newsletter subscription feature (subscribe and unsubscribe) (2) -> Ali DONE
 - ~~Logo is home button (1)~~[^6]
 - ~~Store locations on the website (1)~~[^7]
 - ~~Delivery or pick-up options (2)~~ [^8] -> Ali
 - Contact us page where the customer can send direct email to our store. (1) -> Valentin
-  [^9]  DONE
+  [^9] DONE
 
 [^1]: How? -> The customer can basically change his address (add, delete and update), username and password so it is 5 features.
 [^2]: Only products that they have previously purchased. -> Yes.
