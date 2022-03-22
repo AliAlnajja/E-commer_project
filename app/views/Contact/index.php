@@ -6,6 +6,7 @@
 <link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 
 <style>
+
 	div.elem-group {
   margin: 40px 0;
 }
@@ -87,6 +88,7 @@ button:hover {
   </div>
   <button type="submit">Send Message</button>
 </form>
+
 		</div>
 	</div>
 </body>

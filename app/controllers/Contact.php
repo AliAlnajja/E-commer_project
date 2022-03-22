@@ -4,6 +4,7 @@ namespace app\controllers;
 class Contact extends \app\core\Controller{
 
 	public function index(){
+
 		
 		
 		$this->view('Contact/index');
@@ -86,4 +87,3 @@ class Contact extends \app\core\Controller{
 }
 }
 	}
-
