@@ -13,7 +13,7 @@ body {
 	background: var(--bkg-color);
 }
 
-h1, p {
+h1, h2, h3, h4, h5, h6, p {
 	color: var(--text-color);
 }
 
@@ -32,3 +32,9 @@ th, td {
 div.header {
 	background: var(--header-color);
 }
+
+div.form {
+	color: var(--text-color);
+	background: var(--bkg-color);
+}
+

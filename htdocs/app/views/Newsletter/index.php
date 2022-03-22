@@ -14,6 +14,19 @@
 		box-shadow: 0px 0px 20px #FFFFFF;
 		font-family: Poppins;
 	}
+
+  /*
+	.button2 {
+		font: bold 11px Arial;
+		text-decoration: none;
+		background-color: #EEEEEE;
+		color: #333333;
+		padding: 2px 6px 2px 6px;
+		border-top: 1px solid #CCCCCC;
+		border-right: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #CCCCCC;
+	}*/
 </style>
 
 	<!-- JavaScript Bundle with Popper -->
@@ -38,9 +51,19 @@
 				<label>Email<input type="email" name="email" required class="form-control mt-2"></label>
 				<label>Phone<input type="text" name="phone" class="form-control mt-2"></label>
 				<br>
-				<input type="submit" name="action" value="submit" class="btn btn-info mt-2 btn-block">
-				<input type="button" name="action" value="see if your subscribed" class="btn btn-info mt-2 btn-block">
-			</form>
+
+				<input type="submit" name="action" value="Subscribe" class="btn btn-info mt-2 btn-block">
+				<?php 
+				//$data is the local name for the data passed into the view
+				foreach ($data as $subscribers) {
+					echo "<tr>
+						<td>
+							<a href='/Newsletter/delete/$subscribers->newsletter_id'delete class= 'btn btn-info mt-2 btn block'>Unsubscribe</a>
+						</td>
+					<tr>";
+					}
+				?>
+			</form>		
 		</div>
 	</div>
 </body>

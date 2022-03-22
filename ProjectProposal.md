@@ -15,32 +15,24 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 
 # Implementations
 
-- Sign-in/sign-out or create account with 2FA (does not count)
-- Customer can customize their account (4)[^1] -> Username (Alex) -> the rest Valentin
-- Product page with details (1) -> Ali
-- Customer can review product (1)[^2] -> Alex
-- Sort by price, categories, alphabetically, number of reviews or ratings (5) -> Alex
-- Page numbers at the bottom for easy browsing (1)[^3] -> Alex
-- Can create or delete multiple wishlists (2) -> Ali
-- Can add, delete products in wishlist (3) -> (2)[^4] -> Valentin
-- Add/remove/update a product's quantity to cart system or "Buy now" button (4)[^5] -> Ali
-- Checkout ~~system~~ (1) -> Valentin
-- Search ~~bar~~ (1) -> Alex
-- Light or Dark mode (~~2~~1) -> Ali
-- Recommendations/trending/sales on products on the homepage (3) -> Valentin
-- "Go back up" feature when you scroll far down (1) -> Alex
-- ~~Logo is home button (1)~~[^6]
-- ~~Store locations on the website (1)~~[^7]
-- Delivery or pick-up options (2)[^8] -> Ali
-- Contact us page where the customer can send direct email to our store. (1) -> Valentin
-  [^9]
+- Sign-in/sign-out or create account with 2FA (does not count) 						DONE
+- Customer can customize their account (5) 											DONE
+- Sort by lowest/highest price (2)													DONE
+- Sort by categories (1)
+- Sort by ascending/descending alphabet (2)
+- Sort by few/big amount of reviews (2)
+- Sort by lowly/highly rated (2)
+- Can create wishlist (1)
+- Can add or delete products in wishlist (2)
+- Add/remove/update a product's quantity to cart system (3)
+- Checkout (1)
+- Search (1)																		DONE
+- Light or Dark mode (1)															DONE
+- Recommendations/trending/sales of products on the homepage (3)
+- "Go back up" feature when you scroll far down (1) 								DONE
+- Newsletter subscription feature (subscribe and unsubscribe) (2)					DONE
+- Contact us page (1) 																DONE
 
-[^1]: How? -> The customer can basically change his address (add or delete), username and password so it is 4.
-[^2]: Only products that they have previously purchased. -> Yes.
-[^3]: Here you are talking about pagination of listings? You may phrase this as a selection of 10, 20, or 40 items per page as well. -> Yes, we are talking about pagination where there is a prev 1, 2, 3, 4 ... 9 and a next button, there is also a fixed amount of items per page.
-[^4]: How do you update an item in a wishlist? Usually, one can only add and delete. -> Good question.
-[^5]: Is "Buy now" a quick checkout for a single item? -> Yes a quick checkout for a single item.
-[^6]: Normal navigation on websites are just a fact of life and don't count toward added value in Web application. -> Truth.
-[^7]: Add, delete, edit, and view store locations? If you have multiple store locations, you will need separate inventory with the FK to the locations table. -> We will not be doing it anymore.
-[^8]: "Clients can get their order delivered by making this choice at checkout". This implies more user stories such as : clients can add and remove shipping addresses. -> got addressed in the customer can customize feature.
-[^9]: What will this be inspired from and how many hours of work are you budgetting? -> We got inspired by adonis front store website, and we are assuming approximately a good 25 - 30 hours per team member.
+
+
+			
