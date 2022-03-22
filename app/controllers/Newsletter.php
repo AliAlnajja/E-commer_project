@@ -13,8 +13,8 @@ class Newsletter extends \app\core\Controller{
 		$newsLetter = new \app\models\Newsletter();
 		if (!isset($_POST['action'])) {	
 			$this->view('Newsletter/index');
-		} else if (!filter_var($newsLetter->email=$_POST["email"], FILTER_VALIDATE_EMAIL)){
-			header("location: /NewsLetter/index?err=email given is invalid");
+		} else if (!filter_var($newsLetter->getEmail($_POST['email']), FILTER_VALIDATE_EMAIL)){
+			header("location:/NewsLetter/index?err=email given is invalid");
 		} else if ($newsLetter->getEmail($_POST['email'])) {
 			header("location:/Newsletter/index?err=Subscriber already exists");
 		} else {
