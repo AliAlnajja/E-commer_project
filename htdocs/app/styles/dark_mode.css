@@ -32,3 +32,8 @@ th, td {
 div.header {
 	background: var(--header-color);
 }
+
+div.form {
+	color: var(--text-color);
+	background: var(--bkg-color);
+}
