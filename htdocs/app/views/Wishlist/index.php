@@ -31,6 +31,7 @@
 	    		<p>Category: $items->category</p>
 	    		<p>Rating : $items->rating</p>
 	    		<input type='submit' name='add-to-cart' value='add to cart'/>
+	    		<a href='/Items/deleteFromWishList?item_id=$items->item_id'deleteFromWishlist class='btn btn-info'> Delete from wishlist</a>
 	  			</div>
 				</div>";
 				}
