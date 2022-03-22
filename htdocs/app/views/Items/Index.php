@@ -47,20 +47,24 @@
 		</table> <br>
 		
 		<?php 
-			$item = new \app\models\Items();
-			$all = $item->getAll();
-			$lowestPrice = $item->getLowestPrice();
-			$highestPrice = $item->getHighestPrice();
-			
-			$select = $_POST['sort'];
-			if ($select == 'all')
-				$this->view('Items/viewItems', $all); 
-			else if ($select == 'lowPrice')
-				$this->view('Items/viewItems', $lowestPrice); 
-			else if ($select == 'highPrice')
-				$this->view('Items/viewItems', $highestPrice); 
+            $item = new \app\models\Items();
+            $all = $item->getAll();
+            $lowestPrice = $item->getLowestPrice();
+            $highestPrice = $item->getHighestPrice();
 
-		?>
+            $select = $_POST['sort'];
+            if (isset($_POST['search'])) {
+                $queries= $_POST['search'];
+                $searchResult = $item->searchBar($queries);
+                $this->view('Items/viewItems', $searchResult);
+            } else if ($select == 'lowPrice')
+                $this->view('Items/viewItems', $lowestPrice); 
+            else if ($select == 'highPrice')
+                $this->view('Items/viewItems', $highestPrice); 
+            else
+                $this->view('Items/viewItems', $all); 
+
+        ?>
 		
 		<?php $this->view('shared/toTop'); ?>
 		

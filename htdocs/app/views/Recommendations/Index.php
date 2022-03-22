@@ -33,7 +33,7 @@
 	    		<p>Category: $item->category</p>
 	    		<p>Rating : $item->rating</p>
 	    		<input type='submit' name='add-to-cart' value='add to cart'/>
-	    		<input type='submit' name='add-to-wishlist' value='add to wishlist'/>
+	    		<a href=/Items/addToWishList?item_id=$item->item_id>Add to wishlist</a>
 	  			</div>
 				</div>";
 				}

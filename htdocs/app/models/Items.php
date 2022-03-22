@@ -40,7 +40,6 @@ class Items extends \app\core\Model {
 	}
 
 	function searchBar($text) {
-		echo "%$text%";
         $SQL = "SELECT * FROM items WHERE (name LIKE :name)";
         $STMT = self::$_connection->prepare($SQL);
         $STMT->execute(['name'=>"%$text%"]);

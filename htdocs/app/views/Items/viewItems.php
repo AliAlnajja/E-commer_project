@@ -19,6 +19,7 @@
 				<h5>Price: $items->price$</h5>
 				<h5>Rating: $items->rating</h5>
 				<input type='submit' name='add-to-cart' value='add to cart'/>
+				<a href='addToWishList?item_id=$items->item_id'addToWishlist class='btn btn-info'> Add to wishlist</a>
 			</div> <br>";
 	}
 ?>
