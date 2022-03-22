@@ -24,9 +24,6 @@ div.button {
 	align-items: center;
 }
 
-
-
-
 </style>
 </body>
 	<div class="header">
