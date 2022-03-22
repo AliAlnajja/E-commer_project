@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	<!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<title>wishlist</title>
+	<title>Wishlist</title>
 </head>
 <body>
 	<div class='container'>
@@ -31,6 +31,7 @@
 	    		<p>Category: $items->category</p>
 	    		<p>Rating : $items->rating</p>
 	    		<input type='submit' name='add-to-cart' value='add to cart'/>
+	    		<a href='/Items/deleteFromWishList?item_id=$items->item_id'deleteFromWishlist class='btn btn-info'> Delete from wishlist</a>
 	  			</div>
 				</div>";
 				}

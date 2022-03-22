@@ -23,8 +23,6 @@
 div.button {
 	align-items: center;
 }
-
-
 .switch {
   position: relative;
   float: right;
@@ -89,8 +87,6 @@ input:checked + .slider:before {
 }
 
 </style>
-
-
 </body>
 	<div class="header">
 		<div class="left">
@@ -98,7 +94,9 @@ input:checked + .slider:before {
 			<a href='/Items/index'>Browse Products</a>
 			<a href='/Recommendations/index'>Browse Recommended Products</a>
 			<a href='/Newsletter/index'>Newsletter</a>
+			<a href='/Wishlist/index'>Wishlist</a>
 			<a href='/Contact/index'>Contact Us</a>
+
 			<!-- <div class="toggle"> 
 					<button class="btn-toggle"></button>
 			</div> -->
@@ -106,17 +104,13 @@ input:checked + .slider:before {
   					<input type="checkbox">
   					<span class="slider round"></span>
 				</label>
-				
-			
-
-
 		</div>
 
 		<div class="right">
 			<?php if (!isset($_SESSION['user_id'])) { ?>
 				<a href='/User/register'>Register</a>
 				<a href='/User/login'>Log in</a>
-				
+
 			<?php } else { ?>
 				<a href='/User/logout'>Log out</a>
 				<?php $user_id = $_SESSION['user_id']; ?> 
