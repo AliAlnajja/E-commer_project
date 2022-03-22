@@ -15,7 +15,8 @@
 		font-family: Poppins;
 	}
 
-	.b/*utton2 {
+  /*
+	.button2 {
 		font: bold 11px Arial;
 		text-decoration: none;
 		background-color: #EEEEEE;
@@ -26,7 +27,6 @@
 		border-bottom: 1px solid #333333;
 		border-left: 1px solid #CCCCCC;
 	}*/
-
 </style>
 
 	<!-- JavaScript Bundle with Popper -->
@@ -51,6 +51,7 @@
 				<label>Email<input type="email" name="email" required class="form-control mt-2"></label>
 				<label>Phone<input type="text" name="phone" class="form-control mt-2"></label>
 				<br>
+
 				<input type="submit" name="action" value="Subscribe" class="btn btn-info mt-2 btn-block">
 				<?php 
 				//$data is the local name for the data passed into the view

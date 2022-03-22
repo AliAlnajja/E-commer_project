@@ -15,13 +15,12 @@ class Wishlist extends \app\core\Model {
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\User");
 		return $STMT->fetch();
 	}
-	
-	function getUsername($user_id) {
-		$SQL = 'SELECT username FROM user WHERE user_id = :user_id';
+
+	function getWishList($user_id) {
+		$SQL = 'SELECT * FROM wishlist JOIN items ON items.item_id = wishlist.item_id WHERE wishlist.user_id = :user_id';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['user_id'=>$user_id]);
-		//TODO:add something here to make the return types cooler
-		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\User");
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Wishlist");
 		return $STMT->fetch();
 	}
 	

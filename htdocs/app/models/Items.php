@@ -7,14 +7,14 @@ class Items extends \app\core\Model {
 		parent::__construct();
 	}
 
-	function getAll(){
+	function getAll() {
 		$SQL = 'SELECT * FROM items';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute();
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
 		return $STMT->fetchAll();
 	}
-	
+
 	function get($item_id){
 		$SQL = 'SELECT * FROM items WHERE item_id = :item_id';
 		$STMT = self::$_connection->prepare($SQL);
@@ -39,7 +39,7 @@ class Items extends \app\core\Model {
 		return $STMT->fetchAll();
 	}
 
-	function searchBar($text){
+	function searchBar($text) {
 		echo "%$text%";
         $SQL = "SELECT * FROM items WHERE (name LIKE :name)";
         $STMT = self::$_connection->prepare($SQL);
