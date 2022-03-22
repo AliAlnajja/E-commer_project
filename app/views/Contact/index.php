@@ -6,38 +6,46 @@
 <link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 
 <style>
-	input[type=text], select, textarea {
-	 	width: 100%; /* Full width */
-	  	padding: 12px; /* Some padding */ 
-	  	border: 1px solid #ccc; /* Gray border */
-	  	border-radius: 4px; /* Rounded borders */
-	  	box-sizing: border-box; /* Make sure that padding and width stays in place */
-	  	margin-top: 6px; /* Add a top margin */
-	  	margin-bottom: 16px; /* Bottom margin */
-	  	resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-	}
 
-	/* Style the submit button with a specific background color etc */
-	input[type=submit] {
-		background-color: #04AA6D;
-		color: white;
-		padding: 12px 20px;
-		border: none;
-		border-radius: 4px;
-		cursor: pointer;
-	}	
+	div.elem-group {
+  margin: 40px 0;
+}
 
-	/* When moving the mouse over the submit button, add a darker green color */
-	input[type=submit]:hover {
-	  	background-color: #45a049;
-	}
+label {
+  display: block;
+  font-family: 'Aleo';
+  padding-bottom: 4px;
+  font-size: 1.25em;
+}
 
-	/* Add a background color and some padding around the form */
-	.form {
-		border-radius: 5px;
-		background-color: #f2f2f2;
-		padding: 20px;
-	}
+input, select, textarea {
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 1.25em;
+  font-family: 'Aleo';
+  width: 500px;
+  padding: 8px;
+}
+
+textarea {
+  height: 250px;
+}
+
+button {
+  height: 50px;
+  background: green;
+  color: white;
+  border: 2px solid darkgreen;
+  font-size: 1.25em;
+  font-family: 'Aleo';
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid black;
+}
 </style>
 
 	<!-- JavaScript Bundle with Popper -->
@@ -52,23 +60,35 @@
 		<?php $this->view('shared/header'); ?>
 		<br>
 		<div class="form">
-			<form action="action_page.php">
-		    	<label for="fname">First Name</label>
-			    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-			    <label for="lname">Last Name</label>
-			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-				<label for="country">Country</label>
+			<form action="/Contact/takingEmail" method="post">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="department-selection">Choose Concerned Department</label>
+    <select id="department-selection" name="concerned_department" required>
+        <option value="">Select a Department</option>
+        <option value="billing">Billing</option>
+        <option value="marketing">Marketing</option>
+        <option value="technical support">Technical Support</option>
+    </select>
+  </div>
+  <div class="elem-group">
+    <label for="title">Reason For Contacting Us</label>
+    <input type="text" id="title" name="email_title" required placeholder="Unable to Reset my Password" pattern=[A-Za-z0-9\s]{8,60}>
+  </div>
+  <div class="elem-group">
+    <label for="message">Write your message</label>
+    <textarea id="message" name="visitor_message" placeholder="Say whatever you want." required></textarea>
+  </div>
+  <button type="submit">Send Message</button>
+</form>
 
-			    <select id="country" name="country">
-			    	<option value=""></option>
-			      	<option value="canada">Canada</option>
-			      	<option value="usa">USA</option>
-			    </select>
-
-			    <label for="subject">Subject</label>
-			    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-			    <input type="submit" value="Submit">
-  			</form>
 		</div>
 	</div>
 </body>
