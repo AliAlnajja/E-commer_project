@@ -24,7 +24,6 @@ div.button {
 	align-items: center;
 }
 
-
 .switch {
   position: relative;
   float: right;
