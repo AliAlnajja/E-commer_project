@@ -8,6 +8,27 @@
 	height: 138px;
 }
 
+#something.btn {
+			background-color: yellow; /* Green */
+  			border: none;
+  			color: black;
+  			padding: 6px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+  			
+		}
+
+		.btn {
+			background-color: #03f0fc; /* Green */
+  			border: none;
+  			color: black;
+  			padding: 6px;
+  			text-align: center;
+  			text-decoration: none;
+  			display: inline-block;
+		}
+
 
 </style>
 <?php 
@@ -18,8 +39,9 @@
 				<h3>$items->name</h3>
 				<h5>Price: $items->price$</h5>
 				<h5>Rating: $items->rating</h5>
-				<input type='submit' name='add-to-cart' value='add to cart'/>
+				<a href=/Items/addToCart?item_id=$items->item_id' addToCart class ='btn' id ='something'>Add to cart</a>
 				<a href='addToWishList?item_id=$items->item_id'addToWishlist class='btn btn-info'> Add to wishlist</a>
 			</div> <br>";
 	}
 ?>
+

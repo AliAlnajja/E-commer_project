@@ -96,6 +96,7 @@ input:checked + .slider:before {
 			<a href='/Newsletter/index'>Newsletter</a>
 			<a href='/Wishlist/index'>Wishlist</a>
 			<a href='/Contact/index'>Contact Us</a>
+			<a href='/Sales_Details/index'>Sales Details</a>
 
 			<!-- <div class="toggle"> 
 					<button class="btn-toggle"></button>

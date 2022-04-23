@@ -9,6 +9,4 @@ class Wishlist extends \app\core\Controller{
 		$data = $wishlist->getWishList($_SESSION['user_id']);
 		$this->view('Wishlist/index', $data);
 	}
-	
-
 }

@@ -24,6 +24,7 @@ class Wishlist extends \app\core\Model {
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Wishlist");
 		return $STMT->fetchAll();
 	}
+
 	function delete($item_id){
 		$SQL = 'DELETE FROM wishlist WHERE item_id = :item_id';
 		$STMT = self::$_connection->prepare($SQL);
