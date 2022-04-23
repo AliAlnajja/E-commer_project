@@ -94,7 +94,6 @@ input:checked + .slider:before {
 			<a href='/Items/index'>Browse Products</a>
 			<a href='/Recommendations/index'>Browse Recommended Products</a>
 			<a href='/Newsletter/index'>Newsletter</a>
-			<a href='/Wishlist/index'>Wishlist</a>
 			<a href='/Contact/index'>Contact Us</a>
 
 			<!-- <div class="toggle"> 
@@ -115,7 +114,12 @@ input:checked + .slider:before {
 				<a href='/User/logout'>Log out</a>
 				<?php $user_id = $_SESSION['user_id']; ?> 
 				<a href='/User/index'>Account</a>
-				<p>Hello, <?php echo $_SESSION['username'];?>.</p>
+				<a href='/Wishlist/index'>Wishlist</a>
+				<p>Hello, 	<?php 
+								$user = new \app\models\User();
+								$username = $user->getFromUserId($_SESSION['user_id'])->username;
+								echo $username;
+							?>.</p>
 				<?php } ?>	
 		</div>
 	</div> 
