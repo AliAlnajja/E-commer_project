@@ -7,11 +7,10 @@ class Sales_Details extends \app\core\Model {
 		parent::__construct();
 	}
 
-	function getAll(){
+	function getAll() {
 		$SQL = 'SELECT * FROM sales_details';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute();
-		//TODO:add something here to make the return types cooler
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Sales_Details");
 		return $STMT->fetchAll();
 	}	
@@ -20,12 +19,11 @@ class Sales_Details extends \app\core\Model {
 		$SQL = 'SELECT * FROM sales_details WHERE item_id = :item_id';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['item_id'=>$item_id]);
-		//TODO:add something here to make the return types cooler
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Sales_Details");
 		return $STMT->fetchAll();
 	}
 
-	function delete($item_id){
+	function delete($item_id) {
 		$SQL = 'DELETE FROM sales_details WHERE item_id = :item_id';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['item_id'=>$item_id]);
