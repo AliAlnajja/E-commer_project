@@ -19,18 +19,20 @@
 		<input type="submit" value="Search!" />
 		</form>
 		<?php 
-		foreach ($data as $items) {
+		foreach ($data as $cart) {
+			$items = new \app\models\Items();
+			$item = $items->get($cart->item_id);
 			echo "
 				<div>
-					<img src='/images/$items->image' width='128' height='128'/>
+					<img src='/images/$item->image' width='128' height='128'/>
 	  			<div>
 
-	    		<p style='font-size:150%;' >$items->name</p>
-	    		<p>Price: $items->price$</p>
-	    		<p>Stock: $items->stock</p>
-	    		<p>Category: $items->category</p>
-	    		<p>Rating : $items->rating</p>
-	    		<input type='submit' name='add-to-cart' value='add to cart'/>
+	    		<p style='font-size:150%;' >$item->name</p>
+	    		<p>Price: $item->price$</p>
+	    		<p>Stock: $item->stock</p>
+	    		<p>Category: $item->category</p>
+	    		<p>Rating : $item->rating</p>
+	    		<a href='/Items/deleteFromCart?item_id=$item->item_id'deleteFromCart class='btn btn-info'> Delete from Cart</a>
 	  			</div>
 				</div>";
 				}

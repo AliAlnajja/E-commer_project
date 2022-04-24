@@ -19,7 +19,6 @@ class Newsletter extends \app\core\Model {
 		$SQL = 'SELECT * FROM newsletter WHERE newsletter_id = :newsletter_id';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['newsletter_id'=>$newsletter_id]);
-		//TODO:add something here to make the return types cooler
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Newsletter");
 		return $STMT->fetch();
 	}

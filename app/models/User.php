@@ -7,10 +7,17 @@ class User extends \app\core\Model {
 		parent::__construct();
 	}
 
-	function exists() { //returns false if the record does not exist and true otherwise
+	function exists() {
 		return $this->getFromUsername($this->username) != false;
 	}
-
+	
+	function usedUsername($username) {
+		$SQL = 'SELECT * FROM user WHERE username = :username';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['username'=>$username]);
+		return $STMT->fetch() >= 1;
+	}
+	
 	function getFromUsername($username) {
 		$SQL = 'SELECT * FROM user WHERE username = :username';
 		$STMT = self::$_connection->prepare($SQL);

@@ -52,17 +52,22 @@ class User extends \app\core\Controller {
 	}
 	
 	function update_details($user_id) {
-		$user = new \app\models\User();
-		$user = $user->getFromUserId($user_id);
+		$users= new \app\models\User();
+		$user = $users->getFromUserId($user_id);
 		
 		if (!isset($_POST['action'])) {
 			$this->view('User/update_details', $user);
 		} else {
-			$user->username = $_POST['username'];
-			$user->email = $_POST['email'];
-			$user->address = $_POST['address'];
-			$user->updateDetails();
-			header('location:/User/index');
+			if (!$users->usedUsername($_POST['username'])) {
+				$user->username = $_POST['username'];
+				$user->email = $_POST['email'];
+				$user->address = $_POST['address'];
+				$user->updateDetails();
+				header('location:/User/index');
+			} else {
+				$this->view('User/update_details', $user);
+				echo '<script>alert("That username is already in use.")</script>';
+			}
 		}
 	}
 	
