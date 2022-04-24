@@ -18,12 +18,12 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 - Sign-in/sign-out or create account with 2FA (does not count) 						DONE
 - Customer can customize their account (5) 											DONE
 - Sort by lowest/highest price (2)													DONE
-- Sort by categories (1)
-- Sort by ascending/descending alphabet (2)
+- Sort by categories (1)															DONE
+- Sort by ascending/descending alphabet (2)											DONE
 - Sort by few/big amount of reviews (2)
-- Sort by lowly/highly rated (2)
-- Can create wishlist (1)
-- Can add or delete products in wishlist (2)
+- Sort by lowly/highly rated (2)													DONE
+- Can create wishlist (1)															DONE
+- Can add or delete products in wishlist (2)										DONE
 - Add/remove/update a product's quantity to cart system (3)
 - Checkout (1)
 - Search (1)																		DONE
@@ -32,7 +32,3 @@ by category and has an easy to use web interface. Our clientele is anyone who wi
 - "Go back up" feature when you scroll far down (1) 								DONE
 - Newsletter subscription feature (subscribe and unsubscribe) (2)					DONE
 - Contact us page (1) 																DONE
-
-
-
-			

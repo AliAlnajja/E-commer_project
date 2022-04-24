@@ -1,4 +1,5 @@
 <html>
+
 <head>
 
 	<!-- CSS only -->
@@ -16,6 +17,20 @@
 	</script>
 
 </head>
+
+<style>
+
+.item {
+}
+
+.image {
+	float: left;
+	width: 	138px;
+	height: 138px;
+}
+
+</style>
+
 <body>
 	<div class='container'>
 		
@@ -28,44 +43,43 @@
 		</form>
 		
 		<table>
-			<tr><th>All&emsp;</th> <th>&emsp;Price</th> <th>&emsp;Alphabetically</th> <th>&emsp;Reviews</th> <th>&emsp;Ratings</th></tr>
-			<form name='sorting' method='post'>
-				<td><label><input type="radio" name="sort" value="all" onChange="autoSubmit();"> All</label></td>
+			<tr><th>All&emsp;</th> <th>&emsp;Price</th> <th>&emsp;Alphabetically</th> <th>&emsp;Reviews</th> <th>&emsp;Ratings</th> <th>&emsp;Categories</th></tr>
+				<td><label><a href='/Items/all'>All</a></label></td>
 				
-				<td>&emsp;<label><input type="radio" name="sort" value="lowPrice" onChange="autoSubmit();"> Lowest First</label> <br>
-				<label>&emsp;<input type="radio" name="sort" value="highPrice" onChange="autoSubmit();"> Highest First</label></td>
+				<td>&emsp;<label><a href='/Items/lowPrice'>Lowest First</label> <br>
+				<label>&emsp;<a href='/Items/highPrice'>Highest First</label></td>
 				
-				<td>&emsp;<label><input type="radio" name="sort" value="aToZ" onChange="autoSubmit();"> 0 - Z</label> <br>
-				<label>&emsp;<input type="radio" name="sort" value="zToA" onChange="autoSubmit();"> Z - 0</label></td>
+				<td>&emsp;<label><a href='/Items/ascending'>0 - Z</label> <br>
+				<label>&emsp;<a href='/Items/descending'>Z - 0</label></td>
 				
-				<td><label>&emsp;<input type="radio" name="sort" value="fewReviews" onChange="autoSubmit();"> Lowest First</label> <br>
-				<label>&emsp;<input type="radio" name="sort" value="lotReviews" onChange="autoSubmit();"> Highest First</label></td>
+				<td><label>&emsp;<a href='/Items/lowReview'>Lowest First</label> <br>
+				<label>&emsp;<a href='/Items/highReview'>Highest First</label></td>
 				
-				<td><label>&emsp;<input type="radio" name="sort" value="lowRating" onChange="autoSubmit();"> Lowly Rated</label> <br>
-				<label>&emsp;<input type="radio" name="sort" value="highRating" onChange="autoSubmit();"> Highly Rated</label></td>
-			</form>
+				<td><label>&emsp;<a href='/Items/lowRating'>Lowly Rated</label> <br>
+				<label>&emsp;<a href='/Items/highRating'>Highly Rated</label></td>
+				
+				<td><label>&emsp;<a href='/Items/cateMeat'>Meats</label> <br>
+				<label>&emsp;<a href='/Items/cateVege'>Vegetables</label></td>
+				
+				<td><label><a href='/Items/index'>Future</label> <br>
+				<label><a href='/Items/index'>Future</label></td>
+				
 		</table> <br>
 		
-		<?php 
-            $item = new \app\models\Items();
-            $all = $item->getAll();
-            $lowestPrice = $item->getLowestPrice();
-            $highestPrice = $item->getHighestPrice();
-
-            $select = $_POST['sort'];
-            if (isset($_POST['search'])) {
-                $queries= $_POST['search'];
-                $searchResult = $item->searchBar($queries);
-                $this->view('Items/viewItems', $searchResult);
-            } else if ($select == 'lowPrice')
-                $this->view('Items/viewItems', $lowestPrice); 
-            else if ($select == 'highPrice')
-                $this->view('Items/viewItems', $highestPrice); 
-            else
-                $this->view('Items/viewItems', $all); 
-
-        ?>
 		
+		<?php 
+		foreach ($data as $items) {
+			echo "
+				<div class='item'>
+					<img src='/images/$items->image' class='image' align='left'>
+					<h3>$items->name</h3>
+					<h5>Price: $items->price$</h5>
+					<h5>Rating: $items->rating</h5>
+					<input type='submit' name='add-to-cart' value='add to cart'/>
+					<a href='addToWishList?item_id=$items->item_id'addToWishlist class='btn btn-info'> Add to wishlist</a>
+				</div> <br>";
+		}
+?>
 		<?php $this->view('shared/toTop'); ?>
 		
 	</div>
