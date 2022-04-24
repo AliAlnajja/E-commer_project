@@ -110,5 +110,4 @@ class Items extends \app\core\Model {
         $STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
         return $STMT->fetchAll();
     }
-	
 }

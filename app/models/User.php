@@ -7,7 +7,7 @@ class User extends \app\core\Model {
 		parent::__construct();
 	}
 
-	function exists() { //returns false if the record does not exist and true otherwise
+	function exists() {
 		return $this->getFromUsername($this->username) != false;
 	}
 	
