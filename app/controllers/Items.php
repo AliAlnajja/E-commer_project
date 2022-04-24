@@ -80,15 +80,7 @@ class Items extends \app\core\Controller {
 		$wishlist->insert();
 		header('location:/Items/index');
 	}
-	
-	public function deleteFromWishList() {
-		$wishlist = new \app\models\Wishlist();
-		//$wishlist->user_id = $_SESSION['user_id'];
-		//$wishlist->item_id = $_GET['item_id'];
-		
-		$wishlist->delete($_GET['item_id']);
-		header('location:/Items/index');
-	}
+
 
 
 	public function addToCart() {
@@ -99,10 +91,31 @@ class Items extends \app\core\Controller {
 		header('location:/Items/index');
 	}
 
+	public function deleteFromWishList() {
+		$wishlist = new \app\models\Wishlist();
+		//$wishlist->user_id = $_SESSION['user_id'];
+		//$wishlist->item_id = $_GET['item_id'];
+		
+		$wishlist->delete($_GET['item_id']);
+		header('location:/Items/index');
+	}
+
+	public function addToCart() {
+		$sales_details = new \app\models\Sales_Details();
+		$sales_details->item_id = $_GET['item_id'];
+		$sales_details->quantity = 1;
+		$sales_details->insert();
+		header('location:/Items/index');
+	}
+ 
+
 	public function deleteFromCart() {
 		$sales_details = new \app\models\Sales_Details();
 		$sales_details->delete($_GET['item_id']);
 		header('location:/Items/index');
 	}
+
+  
+
 }
 
