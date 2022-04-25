@@ -6,7 +6,7 @@
 	<script  type="text/javascript">
 		function enableCheckoutBtn(){
        // Give the button an ID then enable it
-       document.getElementById("checkoutButton").disabled = false;
+       document.getElementById("checkoutBtn").disabled = false;
 
     }
 </script>
@@ -42,22 +42,23 @@
 					</div>";
 			}
 		?>
-		
+		<br>
+		<form method="post" action="/Items/checkout">
+		<input type="submit" value="Checkout" id="checkoutBtn" disabled />	
+		</form>
 		<?php
 			$con = mysqli_connect("localhost","root","","redteam");
 			$result = mysqli_query($con, 'SELECT SUM(price) AS price_sum FROM sales_details'); 
 			$row = mysqli_fetch_assoc($result); 
 			$sum = $row['price_sum'];
-		
-			echo "<p>Subtotal = $sum</p>"
+			if($sum != 0){
+				echo "<script> enableCheckoutBtn(); </script>";
+			}
+			echo "<p style='text-align:right;'>Subtotal = $sum</p>";
 		?>
 		
 		<?php $this->view('shared/toTop'); ?>
 		
-		<br>
-		<form method="post" action="/Items/checkout">
-		<input type="submit" value="Checkout" />	
-		</form>
 	</div>
 </body>
 
