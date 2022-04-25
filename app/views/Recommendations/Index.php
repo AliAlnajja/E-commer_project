@@ -1,72 +1,43 @@
 <html>
+
 <head>
-
-	<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
-
-	<style>
-		#something.btn {
-			background-color: yellow; /* Green */
-  			border: none;
-  			color: black;
-  			padding: 6px;
-  			text-align: center;
-  			text-decoration: none;
-  			display: inline-block;
-  			
-		}
-
-		.btn {
-			background-color: #03f0fc; /* Green */
-  			border: none;
-  			color: black;
-  			padding: 6px;
-  			text-align: center;
-  			text-decoration: none;
-  			display: inline-block;
-		}
-	</style>
-
-
-	<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-	<title>Recommendations</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" type="text/css" href="/app/styles/noReposition.css">
+	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
+	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
+	<link rel="stylesheet" type="text/css" href="/app/styles/items.css">
+	<link rel="stylesheet" type="text/css" href="/app/styles/buttons.css">
+	
+	<title>Recommendations</title>	
 </head>
+
 <body>
 	<div class='container'>
-		
 		<?php $this->view('shared/header'); ?>
 		
+
 		<br>
 		<form method="post" action='/Recommendations/search'>
 		<input type="text" name="search" />
 		<input type="submit" value="Search!" />
-		</form>
+    </form>
 		<?php 
-		foreach ($data as $recommendedItems) {
-			$items = new \app\models\Items();
-			$item = $items->get($recommendedItems->item_id);
-			echo "
-				<div>
-					<img src='/images/$item->image' width='128' height='128'/>
-	  			<div>
-
-	    		<p style='font-size:150%;' >$item->name</p>
-	    		<p>Price: $item->price$</p>
-	    		<p>Stock: $item->stock</p>
-	    		<p>Category: $item->category</p>
-	    		<p>Rating : $item->rating</p>
-	    		<a href=/Items/addToCart?item_id=$item->item_id&price=$item->price' addToCart class ='btn' id ='something'>Add to cart</a>
-	    		<a href='/Items/addToWishList?item_id=$item->item_id' addToWishlist class = 'btn btn-info'> Add to wishlist</a>
-	  			</div>
-				</div>";
-				}
-		
+			foreach ($data as $recommended) {
+				echo "<div class='item'>
+						<img src='/images/$recommended->image' class='image' align='left'>
+						<h3>$recommended->name</h3>
+						<h5>Price: $recommended->price$&emsp;Category: $recommended->category</h5>
+						<h5>Rating: $recommended->rating&emsp;Stock: $recommended->stock</h5>
+						<a href=/Items/addToCart?item_id=$recommended->item_id&price=$recommended->price' addToCart class='button' id ='buy'>Add to cart</a>
+						<a href='addToWishList?item_id=$recommended->item_id'addToWishlist class='button'>Add to wishlist</a>
+					</div> <br>";
+			}
 		?>
 		
 		<?php $this->view('shared/toTop'); ?>
-		
 	</div>
 </body>
+
 </html>

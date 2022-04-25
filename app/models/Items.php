@@ -44,7 +44,7 @@ class Items extends \app\core\Model {
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
 		return $STMT->fetchAll();
 	}
-	//
+	
 	function getFromAlphabetAsc() {
 		$SQL = 'SELECT * FROM items ORDER BY name ASC';
 		$STMT = self::$_connection->prepare($SQL);

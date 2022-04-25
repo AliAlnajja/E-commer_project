@@ -33,7 +33,7 @@ class Newsletter extends \app\core\Controller{
 			$newsLetter->delete($newsletter_id);
 			header("location:/Newsletter/index?msg=Unsubscribed");
 		} else {
-			echo "cant";
+			echo "can't";
 		}
 	}
 }

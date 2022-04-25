@@ -60,7 +60,7 @@ class User extends \app\core\Model {
 		$STMT->execute(['user_id'=>$user_id]);
 	}
 	
-	function searchBar($text){
+	function searchBar($text) {
 		echo "%$text%";
         $SQL = "SELECT * FROM items WHERE (name LIKE :name)";
         $STMT = self::$_connection->prepare($SQL);
@@ -68,5 +68,4 @@ class User extends \app\core\Model {
         $STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
         return $STMT->fetchAll();
     }
-	
 }

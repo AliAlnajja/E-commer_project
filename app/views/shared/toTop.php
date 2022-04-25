@@ -1,24 +1,4 @@
-<style>
-#topButton {
-	display: none;
-	position: fixed;
-	bottom: 64px;
-	right: 50px;
-	z-index: 99;
-	border: none;
-	outline: none;
-	background-color: #808080;
-	color: white;
-	cursor: pointer;
-	padding: 10px;
-	border-radius: 8px;
-	font-size: 24px;
-}
-
-#topButton:hover {
-  background-color: #FF0000; /* Add a dark-grey background on hover */
-}
-</style>
+<link rel="stylesheet" type="text/css" href="/app/styles/toTop.css">
 
 <button onclick="toTop()" id="topButton" title="Go to top">Top</button>
 

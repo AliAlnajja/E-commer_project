@@ -2,7 +2,7 @@
 namespace app\filters;
 
 #[\Attribute]
-class Create{
+class Create {
 
 	function execute() {
 		$profile = new \app\models\Profile();
@@ -15,5 +15,4 @@ class Create{
 		}
 		return false;
 	}
-
 }
