@@ -13,7 +13,6 @@
 </head>
 
 <body>
-
 	<div class="container">
 		<?php $this->view('shared/header'); ?>
 		

@@ -14,5 +14,4 @@ class Recommendations extends \app\core\Model {
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Recommendations");
 		return $STMT->fetchAll();
 	}	
-	
 }

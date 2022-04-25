@@ -14,4 +14,4 @@ input.addEventListener("click", function () {
 	}
 
 	localStorage.setItem("theme", theme);
-	});
+});
