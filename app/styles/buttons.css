@@ -1,0 +1,22 @@
+/* Default button */
+.button {
+	background-color: #03bafc; /* Blue */
+	border-radius: 5px;
+	font-size: 15px;
+  	color: black;
+  	padding: 6px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+}
+
+/* Buy button */
+.button#buy {
+	background-color: #fcd703; /* Yellow */
+	font-weight: bold;
+}
+
+/* Delete from cart button */
+.button#delete {
+	background-color: #fc6203; /* Orange */
+}

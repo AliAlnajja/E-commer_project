@@ -22,15 +22,16 @@ class Wishlist extends \app\core\Model {
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Wishlist");
 		return $STMT->fetchAll();
 	}
-
-	function delete($item_id){
-		$SQL = 'DELETE FROM wishlist WHERE item_id = :item_id';
-		$STMT = self::$_connection->prepare($SQL);
-		$STMT->execute(['item_id'=>$item_id]);
-	}
+	
 	function insert() {
 		$SQL = 'INSERT INTO wishlist(user_id, item_id, quantity) VALUES(:user_id, :item_id, :quantity)';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['user_id'=>$this->user_id, 'item_id'=>$this->item_id, 'quantity'=>$this->quantity]);
+	}
+	
+	function delete($item_id) {
+		$SQL = 'DELETE FROM wishlist WHERE item_id = :item_id';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['item_id'=>$item_id]);
 	}
 }
