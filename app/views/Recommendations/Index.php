@@ -39,7 +39,7 @@
 		<?php $this->view('shared/header'); ?>
 		
 		<br>
-		<form method="post" action='/Items/search'>
+		<form method="post" action='/Recommendations/search'>
 		<input type="text" name="search" />
 		<input type="submit" value="Search!" />
 		</form>

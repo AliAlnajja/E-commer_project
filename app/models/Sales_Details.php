@@ -30,8 +30,16 @@ class Sales_Details extends \app\core\Model {
 	}
 
 	function insert() {
-		$SQL = 'INSERT INTO sales_details(item_id, quantity) VALUES(:item_id, :quantity)';
+		$SQL = 'INSERT INTO sales_details(item_id, quantity, price) VALUES(:item_id, :quantity, :price)';
 		$STMT = self::$_connection->prepare($SQL);
-		$STMT->execute(['item_id'=>$this->item_id, 'quantity'=>$this->quantity]);
+		$STMT->execute(['item_id'=>$this->item_id, 'quantity'=>$this->quantity, 'price'=>$this->price]);
+	}
+	function getTotalPirce(){
+		$SQL =  'SELECT SUM(price) AS price_sum FROM sales_details';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute();
+		$row = $STMT->fetch(PDO::FETCH_ASSOC);
+		return $sum = $row['price_sum'];
+		
 	}
 }
