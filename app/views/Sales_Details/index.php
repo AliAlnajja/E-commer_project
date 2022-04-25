@@ -27,7 +27,7 @@
 					<div class='itemsContainer'>
 						<img src='/images/$item->image' width='128' height='128'/>
 					
-					<p style='font-size:150%;'>$item->name</p>
+					<p style='font-size:150%;' class='itemName'>$item->name</p>
 					<p>Price: $item->price$</p>
 					<p>Category: $item->category</p>
 					<p>Rating : $item->rating</p>

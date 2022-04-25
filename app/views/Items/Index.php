@@ -52,7 +52,7 @@
 				echo "
 					<div class='item'>
 						<img src='/images/$items->image' class='image' align='left'>
-						<h3>$items->name</h3>
+						<h3 class='itemName'>$items->name</h3>
 						<h5>Price: $items->price$</h5>
 						<h5>Rating: $items->rating</h5>
 						<a href=/Items/addToCart?item_id=$items->item_id&price=$items->price' addToCart class ='button' id ='buy'>Add to cart</a>

@@ -27,7 +27,7 @@
 						<img src='/images/$item->image' width='128' height='128'/>
 						
 						<div>
-							<p style='font-size:150%;' >$item->name</p>
+							<p style='font-size:150%;' class='itemName' >$item->name</p>
 							<p>Price: $item->price$</p>
 							<p>Stock: $item->stock</p>
 							<p>Category: $item->category</p>

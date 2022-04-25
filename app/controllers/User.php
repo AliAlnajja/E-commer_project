@@ -58,7 +58,7 @@ class User extends \app\core\Controller {
 		if (!isset($_POST['action'])) {
 			$this->view('User/update_details', $user);
 		} else {
-			if (!$users->usedUsername($_POST['username'])) {
+			if (!$users->usedUsernameForUpdate($_POST['username'], $_SESSION['user_id'])) {
 				$user->username = $_POST['username'];
 				$user->email = $_POST['email'];
 				$user->address = $_POST['address'];
