@@ -17,21 +17,22 @@
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
+		<h1>Recommendations</h1>	
 
-		<br>
 		<form method="post" action='/Recommendations/search'>
 		<input type="text" name="search" />
 		<input type="submit" value="Search!" />
-    </form>
+		</form>
+		
 		<?php 
 			foreach ($data as $recommended) {
 				echo "<div class='item'>
-						<img src='/images/$recommended->image' class='image' align='left'>
+						<img src='/images/$recommended->image' align='left'>
 						<h3>$recommended->name</h3>
-						<h5>Price: $recommended->price$&emsp;Category: $recommended->category</h5>
+						<h5>Price: $recommended->price$&emsp; Category: $recommended->category</h5>
 						<h5>Rating: $recommended->rating&emsp;Stock: $recommended->stock</h5>
-						<a href=/Items/addToCart?item_id=$recommended->item_id&price=$recommended->price' addToCart class='button' id ='buy'>Add to cart</a>
-						<a href='addToWishList?item_id=$recommended->item_id'addToWishlist class='button'>Add to wishlist</a>
+						<a href=/Items/addToCart?item_id=$recommended->item_id&price=$recommended->price' addToCart class='linkbutton' id ='buy'>Add to cart</a>
+						<a href='addToWishList?item_id=$recommended->item_id'addToWishlist class='linkbutton'>Add to wishlist</a>
 					</div> <br>";
 			}
 		?>

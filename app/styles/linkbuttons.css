@@ -1,5 +1,5 @@
 /* Default button */
-.button {
+.linkbutton {
 	background-color: #03bafc; /* Blue */
 	border-radius: 5px;
 	font-size: 15px;
@@ -11,12 +11,12 @@
 }
 
 /* Buy button */
-.button#buy {
+.linkbutton#buy {
 	background-color: #fcd703; /* Yellow */
 	font-weight: bold;
 }
 
 /* Delete from cart button */
-.button#delete {
+.linkbutton#delete {
 	background-color: #fc6203; /* Orange */
 }

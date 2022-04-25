@@ -51,9 +51,9 @@ class User extends \app\core\Controller {
 		}
 	}
 	
-	function update_details($user_id) {
+	function update_details() {
 		$users= new \app\models\User();
-		$user = $users->getFromUserId($user_id);
+		$user = $users->getFromUserId($_SESSION['user_id']);
 		
 		if (!isset($_POST['action'])) {
 			$this->view('User/update_details', $user);
@@ -71,9 +71,9 @@ class User extends \app\core\Controller {
 		}
 	}
 	
-	function update_password($user_id) {
+	function update_password() {
 		$user = new \app\models\User();
-		$user = $user->getFromUserId($user_id);
+		$user = $user->getFromUserId($_SESSION['user_id']);
 		
 		if (!isset($_POST['action'])) {
 			$this->view('User/update_password', $user);
@@ -89,9 +89,9 @@ class User extends \app\core\Controller {
 		}
 	}
 	
-	function remove_address($user_id) {
+	function remove_address() {
 		$user = new \app\models\User();
-		$user->removeAddress($user_id);
+		$user->removeAddress($_SESSION['user_id']);
 		header('location:/User/index');
 	}
 	
