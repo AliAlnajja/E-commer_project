@@ -29,7 +29,7 @@
 
 	    		<p style='font-size:150%;' >$item->name</p>
 	    		<p>Price: $item->price$</p>
-	    		<p>Stock: $item->stock</p>
+	    		<p>total: $sale->price</p>
 	    		<p>Category: $item->category</p>
 	    		<p>Rating : $item->rating</p>
 	    		<a href='/Items/deleteFromCart?item_id=$item->item_id'deleteFromCart class='btn btn-info'> Delete from Cart</a>

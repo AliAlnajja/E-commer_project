@@ -91,21 +91,21 @@ class Items extends \app\core\Controller {
 	}
 
 	public function addToCart() {
-		$sales_details = new \app\models\Sales_Details();
-		$sales_details->item_id = $_GET['item_id'];
-		$sales_details->quantity = 1;
-		$sales_details->insert();
-		header('location:/Items/index');
-	}
- 
+        $sales_details = new \app\models\Sales_Details();
+        $item = new \app\models\Items();
+
+        $item->get($_GET['item_id']);
+        $sales_details->item_id = $_GET['item_id'];
+        $sales_details->quantity = 1;
+        $sales_details->price = 5;
+        $sales_details->insert();
+        header('location:/Items/index');
+    }
 
 	public function deleteFromCart() {
 		$sales_details = new \app\models\Sales_Details();
 		$sales_details->delete($_GET['item_id']);
-		header('location:/Items/index');
+		header('location:/Sales_Details/index');
 	}
-
-  
-
 }
 

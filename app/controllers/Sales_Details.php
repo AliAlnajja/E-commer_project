@@ -7,4 +7,5 @@ class Sales_Details extends \app\core\Controller{
 		$data = $Sales_Details->getAll();
 		$this->view('Sales_Details/index', $data);
 	}
+
 }
