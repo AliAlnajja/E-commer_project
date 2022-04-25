@@ -54,7 +54,7 @@
 			if($sum != 0){
 				echo "<script> enableCheckoutBtn(); </script>";
 			}
-			echo "<p style='text-align:right;'>Subtotal = $sum</p>";
+			echo "<p style='text-align:right;'>Subtotal = $sum $ </p>";
 		?>
 		
 		<?php $this->view('shared/toTop'); ?>
