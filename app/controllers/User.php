@@ -97,7 +97,7 @@ class User extends \app\core\Controller {
 	
 	#[\app\filters\Login]
 	function logout() {
-		session_destroy();//deletes the session ID and all data
+		session_destroy();
 		header('location:/Main/index');
 	}
 }
