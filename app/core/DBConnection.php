@@ -2,7 +2,6 @@
 namespace app\core;
 
 class DBConnection {
-
 	static $connection = null;
 
 	private function __construct() {
@@ -19,5 +18,4 @@ class DBConnection {
 		new DBConnection();
 		return self::$connection;
 	}
-
 }

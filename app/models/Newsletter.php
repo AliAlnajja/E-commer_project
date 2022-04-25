@@ -7,7 +7,7 @@ class Newsletter extends \app\core\Model {
 		parent::__construct();
 	}
 
-	function getAll(){
+	function getAll() {
 		$SQL = 'SELECT * FROM newsletter';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute();
@@ -15,7 +15,7 @@ class Newsletter extends \app\core\Model {
 		return $STMT->fetchAll();
 	}
 
-	function get($newsletter_id){
+	function get($newsletter_id) {
 		$SQL = 'SELECT * FROM newsletter WHERE newsletter_id = :newsletter_id';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['newsletter_id'=>$newsletter_id]);
@@ -31,13 +31,13 @@ class Newsletter extends \app\core\Model {
 		return $STMT->fetch();
 	}
 	
-	function insert(){
+	function insert() {
 		$SQL = 'INSERT INTO newsletter(first_name,last_name,email,phone) VALUES(:first_name,:last_name,:email,:phone)';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['first_name'=>$this->first_name,'last_name'=>$this->last_name,'email'=>$this->email,'phone'=>$this->phone]);
 	}
 
-	function delete($newsletter_id){
+	function delete($newsletter_id) {
 		$SQL = 'DELETE FROM newsletter WHERE newsletter_id = :newsletter_id';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['newsletter_id'=>$newsletter_id]);

@@ -1,12 +1,17 @@
 body {
 	--text-color: #222;
-	--bkg-color: #fff;
+	--bkg-color: #ffffff;
+	--header-color: #ededed;
+	--link-color: #0000dd;
+	--link-hover-color: #000000;
 }
 
 body.dark-theme {
 	--text-color: #eee;
 	--bkg-color:  #282a36;
-	--header-color: #ffb86c;
+	--header-color: #ffb861;
+	--link-color: #40d0e0;
+	--link-hover-color: #ffffff;
 }
 
 body {
@@ -29,6 +34,14 @@ th, td {
 	color: var(--text-color);
 }
 
+a {
+	color: var(--link-color);
+}
+
+a:hover {
+	color: var(--link-hover-color);
+}
+
 div.header {
 	background: var(--header-color);
 }
@@ -37,4 +50,3 @@ div.form {
 	color: var(--text-color);
 	background: var(--bkg-color);
 }
-

@@ -7,27 +7,21 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/noReposition.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
+	<link rel="stylesheet" type="text/css" href="/app/styles/checkout.css">
 	
-	<title>Login</title>
+	<title>Order confirmation</title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
-		
-		<h1>Login</h1>
-		
-		<form method='post' action=''>
-			<label class='form-label'>Username:<input type='text' name='username' class='form-control' /></label><br>
-			<label class='form-label'>Password:<input type='password' name='password' class='form-control' /></label><br>
-			<input type="submit" name='action' value='Login' class='form-control' />
-		</form>
-		
-		<p>No account? <a href="/User/register">Register here.</a></p>
-		
-		<?php $this->view('shared/toTop'); ?>
 	</div>
 	
+	<br>
+	
+	<img src="\images\circleCheckout.png" class="center">
+	<center><p>Your order has been placed!</p></center>
+	<center><a href="/Main/index">Return to main page</center>
 </body>
 
 </html>

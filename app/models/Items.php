@@ -22,7 +22,13 @@ class Items extends \app\core\Model {
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
 		return $STMT->fetch();
 	}	
-	
+	function getPrice($item_id) {
+		$SQL = 'SELECT price FROM items WHERE item_id = :item_id';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['item_id'=>$item_id]);
+		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
+		return $STMT->fetch();
+	}	
 	function getLowestPrice() {
 		$SQL = 'SELECT * FROM items WHERE price BETWEEN 0 AND 2048 ORDER BY price ASC';
 		$STMT = self::$_connection->prepare($SQL);
@@ -38,7 +44,7 @@ class Items extends \app\core\Model {
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
 		return $STMT->fetchAll();
 	}
-	//
+	
 	function getFromAlphabetAsc() {
 		$SQL = 'SELECT * FROM items ORDER BY name ASC';
 		$STMT = self::$_connection->prepare($SQL);
