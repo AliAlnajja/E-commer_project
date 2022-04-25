@@ -90,7 +90,6 @@ class Items extends \app\core\Controller {
 		header('location:/Items/index');
 	}
  
-
 	public function deleteFromCart() {
 		$sales_details = new \app\models\Sales_Details();
 		$sales_details->delete($_GET['item_id']);
@@ -104,6 +103,8 @@ class Items extends \app\core\Controller {
 		$this->view('Items/index', $searchResult);
   	}
   	public function checkOut() {
+  		$sales_details = new \app\models\Sales_Details();
+  		$sales_details->clearCart();
   		$this->view('Items/checkOut');
   		
   	}

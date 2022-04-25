@@ -103,18 +103,12 @@
 					<a href='addToWishList?item_id=$items->item_id'addToWishlist class='btn btn-info'> Add to wishlist</a>
 				</div> <br>";
 		}
-		$sale_details = new \app\models\Sales_Details();
-		$sum = $sale_details->getTotalPrice();
-		echo "
-			<p>Subtotal: $sum</p>
-		"
 		?>
+
 		<?php $this->view('shared/toTop'); ?>
 		
-	</div>
-	<br>
-		<form method="post" action='//search'>
-			<input type="submit" name="checkut" />
-		</form>
+		</div>
+		<br>
+		
 </body>
 </html>

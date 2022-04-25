@@ -34,12 +34,10 @@ class Sales_Details extends \app\core\Model {
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute(['item_id'=>$this->item_id, 'quantity'=>$this->quantity, 'price'=>$this->price]);
 	}
-	function getTotalPirce(){
-		$SQL =  'SELECT SUM(price) AS price_sum FROM sales_details';
+	function clearCart(){
+		$SQL = 'DELETE FROM sales_details';
 		$STMT = self::$_connection->prepare($SQL);
 		$STMT->execute();
-		$row = $STMT->fetch(PDO::FETCH_ASSOC);
-		return $sum = $row['price_sum'];
-		
 	}
+	
 }

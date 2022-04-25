@@ -57,7 +57,7 @@
 	    		<p>Stock: $item->stock</p>
 	    		<p>Category: $item->category</p>
 	    		<p>Rating : $item->rating</p>
-	    		<a href=/Items/addToCart?item_id=$item->item_id' addToCart class ='btn' id ='something'>Add to cart</a>
+	    		<a href=/Items/addToCart?item_id=$item->item_id&price=$item->price' addToCart class ='btn' id ='something'>Add to cart</a>
 	    		<a href='/Items/addToWishList?item_id=$item->item_id' addToWishlist class = 'btn btn-info'> Add to wishlist</a>
 	  			</div>
 				</div>";

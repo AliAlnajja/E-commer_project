@@ -46,9 +46,20 @@ p {
 				}
 		
 		?>
+		<?php
+
+		$con = mysqli_connect("localhost","root","","redteam");
+		$result = mysqli_query($con, 'SELECT SUM(price) AS price_sum FROM sales_details'); 
+		$row = mysqli_fetch_assoc($result); 
+		$sum = $row['price_sum'];
 		
+		echo "
+			<p>Subtotal = $sum</p>
+		"
+
+		?>
 		<?php $this->view('shared/toTop'); ?>
-		<p>Subtotal = </p>
+		
 		<br>
 		<form method="post" action="/Items/checkout">
 		<input type="submit" value="Checkout" />	
