@@ -92,13 +92,13 @@ class Items extends \app\core\Controller {
 		header('location:/Items/index');
 	}
 
-  public function search() {
+  	public function search() {
 		$queries= $_POST['search'];
 		$item = new \app\models\Items();
 		$searchResult = $item->searchBar($queries);
 		$this->view('Items/index', $searchResult);
 
-  }
+  	}	
   	public function checkOut() {
   		$sales_details = new \app\models\Sales_Details();
   		$sales_details->clearCart();
@@ -109,4 +109,3 @@ class Items extends \app\core\Controller {
 
   }
 
-}
