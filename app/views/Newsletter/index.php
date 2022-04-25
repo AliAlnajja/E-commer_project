@@ -33,6 +33,7 @@
 				<br>
 
 				<input type="submit" name="action" value="Subscribe" class="btn btn-info mt-2 btn-block">
+				
 				<?php 
 					foreach ($data as $subscribers) {
 						echo "<tr><td><a href='/Newsletter/delete/$subscribers->newsletter_id'delete class= 'btn btn-info mt-2 btn block'>Unsubscribe</a></td><tr>";

@@ -93,18 +93,10 @@ class Items extends \app\core\Model {
 		return $STMT->fetchAll();
 	}
 	
-	function getCategoryMeat() {
-		$SQL = 'SELECT * FROM items WHERE category = "Meat"';
+	function getCategory($category) {
+		$SQL = 'SELECT * FROM items WHERE category = :category';
 		$STMT = self::$_connection->prepare($SQL);
-		$STMT->execute();
-		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
-		return $STMT->fetchAll();
-	}
-	
-	function getCategoryVege() {
-		$SQL = 'SELECT * FROM items WHERE category = "Vegetable"';
-		$STMT = self::$_connection->prepare($SQL);
-		$STMT->execute();
+		$STMT->execute(['category'=>$category]);
 		$STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
 		return $STMT->fetchAll();
 	}

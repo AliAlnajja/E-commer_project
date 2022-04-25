@@ -16,19 +16,21 @@
 	</div>
 
 	<div class="right">
-		<?php if (!isset($_SESSION['user_id'])) { ?>
+		<?php 
+			if (!isset($_SESSION['user_id'])) { ?>
 			<a class="link" href='/User/register'>Register</a>
 			<a class="link" href='/User/login'>Log in</a>
-
 		<?php } else { ?>
 			<a class="link" href='/User/logout'>Log out</a>
+			
 			<?php $user_id = $_SESSION['user_id']; ?> 
+			
 			<a class="account" href='/User/index'>
-				<?php 
-					$user = new \app\models\User();
-					$username = $user->getFromUserId($_SESSION['user_id'])->username;
-					echo $username;
-				?>
+			<?php 
+				$user = new \app\models\User();
+				$username = $user->getFromUserId($_SESSION['user_id'])->username;
+				echo $username;
+			?>
 			</a>
 			<a class="link" href='/Wishlist/index'>Wishlist</a>	
 			<a class="link" href='/Sales_Details/index'>Cart</a>
