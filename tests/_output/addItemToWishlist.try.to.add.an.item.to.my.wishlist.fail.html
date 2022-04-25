@@ -1,0 +1,12 @@
+<br />
+<b>Warning</b>:  Undefined array key "user_id" in <b>C:\Xampp\htdocs\app\controllers\Items.php</b> on line <b>67</b><br />
+<br />
+<b>Fatal error</b>:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'user_id' cannot be null in C:\Xampp\htdocs\app\models\Wishlist.php:29
+Stack trace:
+#0 C:\Xampp\htdocs\app\models\Wishlist.php(29): PDOStatement-&gt;execute(Array)
+#1 C:\Xampp\htdocs\app\controllers\Items.php(70): app\models\Wishlist-&gt;insert()
+#2 [internal function]: app\controllers\Items-&gt;addToWishList()
+#3 C:\Xampp\htdocs\app\core\App.php(38): call_user_func_array(Array, Array)
+#4 C:\Xampp\htdocs\index.php(3): app\core\App-&gt;__construct()
+#5 {main}
+  thrown in <b>C:\Xampp\htdocs\app\models\Wishlist.php</b> on line <b>29</b><br />

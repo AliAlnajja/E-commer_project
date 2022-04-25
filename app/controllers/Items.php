@@ -97,13 +97,19 @@ class Items extends \app\core\Controller {
 		$sales_details->insert();
 		header('location:/Items/index');
 	}
-	
+
 	public function deleteFromCart() {
 		$sales_details = new \app\models\Sales_Details();
 		$sales_details->delete($_GET['item_id']);
 		header('location:/Sales_Details/index');
 	}
 	
+  	public function search() {
+		$queries= $_POST['search'];
+		$item = new \app\models\Items();
+		$searchResult = $item->searchBar($queries);
+		$this->view('Items/index', $searchResult);
+
   	public function search() {
 		$queries= $_POST['search'];
 		$item = new \app\models\Items();

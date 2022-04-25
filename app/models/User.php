@@ -17,6 +17,13 @@ class User extends \app\core\Model {
 		$STMT->execute(['username'=>$username]);
 		return $STMT->fetch() >= 1;
 	}
+
+	function usedUsernameForUpdate($username, $user_id) {
+		$SQL = 'SELECT * FROM user WHERE username = :username AND user_id != :user_id';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['username'=>$username, 'user_id'=>$user_id]);
+		return $STMT->fetch() >= 1;
+	}
 	
 	function getFromUsername($username) {
 		$SQL = 'SELECT * FROM user WHERE username = :username';

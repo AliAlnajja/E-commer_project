@@ -18,9 +18,8 @@
 		<?php $this->view('shared/header'); ?>
 		
 		<h1>Wishlist</h1>
-		
 		<br>
-		
+
 		<?php 
 			foreach ($data as $addedToCarts) {
 				$items = new \app\models\Items();

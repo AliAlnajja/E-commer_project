@@ -19,6 +19,7 @@
 	
 	<br>
 	
+
 	<img src="\images\checkmark.png" class="center">
 	<center><p>Your order has been placed!</p></center>
 	<center><a href="/Main/index">Return to main page</center>
