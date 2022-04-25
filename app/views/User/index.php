@@ -27,9 +27,9 @@
 		<br>
 		
 		<?php 
-			echo "<a href='/User/update_details/$data->user_id'>Update details</a>&emsp;";
-			echo "<a href='/User/update_password/$data->user_id'>Update password</a> &emsp;";
-			echo "<a href='/User/remove_address/$data->user_id'>Remove address</a> &emsp;";
+			echo "<a href='/User/update_details'>Update details</a>&emsp;";
+			echo "<a href='/User/update_password'>Update password</a>&emsp;";
+			echo "<a href='/User/remove_address'>Remove address</a>&emsp;";
 		?>
 		
 		<?php $this->view('shared/toTop'); ?>

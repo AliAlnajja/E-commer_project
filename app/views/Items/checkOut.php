@@ -19,7 +19,8 @@
 	
 	<br>
 	
-	<img src="\images\circleCheckout.png" class="center">
+
+	<img src="\images\checkmark.png" class="center">
 	<center><p>Your order has been placed!</p></center>
 	<center><a href="/Main/index">Return to main page</center>
 </body>

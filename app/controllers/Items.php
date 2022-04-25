@@ -52,17 +52,29 @@ class Items extends \app\core\Controller {
 	
 	public function cateMeat() {
 		$item = new \app\models\Items();
-		$items = $item->getCategoryMeat();
+		$items = $item->getCategory("Meat");
 		$this->view('Items/index', $items);
 	}
 	
-	public function cateVege() {
+	public function cateVegetable() {
 		$item = new \app\models\Items();
-		$items = $item->getCategoryVege();
+		$items = $item->getCategory("Vegetable");
 		$this->view('Items/index', $items);
 	}
 	
-  public function addToWishList() {
+	public function cateBaked() {
+		$item = new \app\models\Items();
+		$items = $item->getCategory("Baked");
+		$this->view('Items/index', $items);
+	}
+	
+	public function cateUseless() {
+		$item = new \app\models\Items();
+		$items = $item->getCategory("Useless");
+		$this->view('Items/index', $items);
+	}
+	
+	public function addToWishList() {
 		$wishlist = new \app\models\Wishlist();
 		$wishlist->user_id = $_SESSION['user_id'];
 		$wishlist->item_id = $_GET['item_id'];
@@ -74,7 +86,7 @@ class Items extends \app\core\Controller {
 	public function deleteFromWishList() {
 		$wishlist = new \app\models\Wishlist();	
 		$wishlist->delete($_GET['item_id']);
-		header('location:/Items/index');
+		header('location:/Wishlist/index');
 	}
 
 	public function addToCart() {
@@ -89,8 +101,14 @@ class Items extends \app\core\Controller {
 	public function deleteFromCart() {
 		$sales_details = new \app\models\Sales_Details();
 		$sales_details->delete($_GET['item_id']);
-		header('location:/Items/index');
+		header('location:/Sales_Details/index');
 	}
+	
+  	public function search() {
+		$queries= $_POST['search'];
+		$item = new \app\models\Items();
+		$searchResult = $item->searchBar($queries);
+		$this->view('Items/index', $searchResult);
 
   	public function search() {
 		$queries= $_POST['search'];

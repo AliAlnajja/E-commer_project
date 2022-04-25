@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/buttons.css">
+	<link rel="stylesheet" type="text/css" href="/app/styles/items.css">
 	
 	<title>Wishlist</title>
 </head>
@@ -17,24 +18,20 @@
 		<?php $this->view('shared/header'); ?>
 		
 		<h1>Wishlist</h1>
-		
+		<br>
+
 		<?php 
 			foreach ($data as $addedToCarts) {
 				$items = new \app\models\Items();
 				$item = $items->get($addedToCarts->item_id);
 				echo "
-					<div>
-						<img src='/images/$item->image' width='128' height='128'/>
-						
-						<div>
-							<p style='font-size:150%;' class='itemName' >$item->name</p>
-							<p>Price: $item->price$</p>
-							<p>Stock: $item->stock</p>
-							<p>Category: $item->category</p>
-							<p>Rating : $item->rating</p>
-							<a href=/Items/addToCart?item_id=$item->item_id' addToCart class ='button' id ='nuy'>Add to cart</a>
-							<a href='/Items/deleteFromWishList?item_id=$item->item_id'deleteFromWishlist class='button'>Delete from wishlist</a>
-						</div>
+					<div class='item'>
+						<img src='/images/$item->image' align='left'/>
+						<h3>$item->name</h3>
+						<h5>Price: $item->price$&emsp; Category: $item->category</h5>
+						<h5>Rating: $item->rating&emsp;Stock: $item->stock</h5>					
+						<a href=/Items/addToCart?item_id=$item->item_id' addToCart class ='linkbutton' id ='buy'>Add to cart</a>
+						<a href='/Items/deleteFromWishList?item_id=$item->item_id'deleteFromWishlist class='linkbutton'>Delete from wishlist</a>
 					</div>";
 				}
 			?>
