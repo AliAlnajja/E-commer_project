@@ -48,21 +48,25 @@
 		</table><br>
 		
 		<?php 
-			foreach ($data as $items) {
-				echo "
-					<div class='item'>
-						<img src='/images/$items->image' class='image' align='left'>
-						<h3>$items->name</h3>
-						<h5>Price: $items->price$&emsp;Category: $items->category</h5>
-						<h5>Rating: $items->rating&emsp;Stock: $items->stock</h5>
-						<a href=/Items/addToCart?item_id=$items->item_id' addToCart class ='button' id ='buy'>Add to cart</a>
-						<a href='addToWishList?item_id=$items->item_id'addToWishlist class='button'> Add to wishlist</a>
-					</div> <br>";
-			}
+
+		foreach ($data as $items) {
+			echo "
+				<div class='item'>
+					<img src='/images/$items->image' class='image' align='left'>
+					<h3>$items->name</h3>
+					<h5>Price: $items->price$</h5>
+					<h5>Rating: $items->rating</h5>
+					<a href=/Items/addToCart?item_id=$items->item_id&price=$items->price' addToCart class ='btn' id ='something'>Add to cart</a>
+					<a href='addToWishList?item_id=$items->item_id'addToWishlist class='btn btn-info'> Add to wishlist</a>
+				</div> <br>";
+		}
 		?>
-		
+
 		<?php $this->view('shared/toTop'); ?>
-	</div>
+		
+		</div>
+		<br>
+		
 </body>
 
 </html>

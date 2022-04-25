@@ -17,12 +17,12 @@
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Recommendations</h1>
-		
-		<form method="post" action='/Items/search'>
+
+		<br>
+		<form method="post" action='/Recommendations/search'>
 		<input type="text" name="search" />
-		<input type="submit" value="Search!" /></form>
-		
+		<input type="submit" value="Search!" />
+    </form>
 		<?php 
 			foreach ($data as $recommended) {
 				echo "<div class='item'>
@@ -30,7 +30,7 @@
 						<h3>$recommended->name</h3>
 						<h5>Price: $recommended->price$&emsp;Category: $recommended->category</h5>
 						<h5>Rating: $recommended->rating&emsp;Stock: $recommended->stock</h5>
-						<a href=/Items/addToCart?item_id=$recommended->item_id' addToCart class='button' id ='buy'>Add to cart</a>
+						<a href=/Items/addToCart?item_id=$recommended->item_id&price=$recommended->price' addToCart class='button' id ='buy'>Add to cart</a>
 						<a href='addToWishList?item_id=$recommended->item_id'addToWishlist class='button'>Add to wishlist</a>
 					</div> <br>";
 			}

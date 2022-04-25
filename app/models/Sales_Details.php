@@ -30,8 +30,14 @@ class Sales_Details extends \app\core\Model {
 	}
 
 	function insert() {
-		$SQL = 'INSERT INTO sales_details(item_id, quantity) VALUES(:item_id, :quantity)';
+		$SQL = 'INSERT INTO sales_details(item_id, quantity, price) VALUES(:item_id, :quantity, :price)';
 		$STMT = self::$_connection->prepare($SQL);
-		$STMT->execute(['item_id'=>$this->item_id, 'quantity'=>$this->quantity]);
+		$STMT->execute(['item_id'=>$this->item_id, 'quantity'=>$this->quantity, 'price'=>$this->price]);
 	}
+	function clearCart(){
+		$SQL = 'DELETE FROM sales_details';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute();
+	}
+	
 }

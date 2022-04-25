@@ -37,18 +37,7 @@ class Items extends \app\core\Controller {
 		$this->view('Items/index', $items);
 	}
 	
-	public function lowReview() {
-		$item = new \app\models\Items();
-		$items = $item->getAll();
-		$this->view('Items/index', $items);
-	}
-	
-	public function highReview() {
-		$item = new \app\models\Items();
-		$items = $item->getAll();
-		$this->view('Items/index', $items);
-	}
-	
+		
 	public function lowRating() {
 		$item = new \app\models\Items();
 		$items = $item->getLowRated();
@@ -92,6 +81,7 @@ class Items extends \app\core\Controller {
 		$sales_details = new \app\models\Sales_Details();
 		$sales_details->item_id = $_GET['item_id'];
 		$sales_details->quantity = 1;
+		$sales_details->price = $_GET['price'];
 		$sales_details->insert();
 		header('location:/Items/index');
 	}
@@ -107,5 +97,16 @@ class Items extends \app\core\Controller {
 		$item = new \app\models\Items();
 		$searchResult = $item->searchBar($queries);
 		$this->view('Items/index', $searchResult);
+
   }
+  	public function checkOut() {
+  		$sales_details = new \app\models\Sales_Details();
+  		$sales_details->clearCart();
+  		$this->view('Items/checkOut');
+  		
+  	}
+
+
+  }
+
 }
