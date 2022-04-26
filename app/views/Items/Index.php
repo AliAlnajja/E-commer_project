@@ -20,10 +20,7 @@
 		
 		<h1>Browse</h1>
 		
-		<form method="post" action='/Items/search'>
-		<input type="text" name="search" />
-		<input type="submit" value="Search!" />
-		</form>
+		<?php $this->view('shared/search'); ?>
 		
 		<table>
 			<tr><th>All</th> <th>&emsp;Price</th> <th>&emsp;Alphabetically</th> <th>&emsp;Reviews</th> <th>&emsp;Ratings</th> <th>&emsp;Categories</th></tr>

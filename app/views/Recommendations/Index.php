@@ -19,10 +19,7 @@
 		
 		<h1>Recommendations</h1>	
 
-		<form method="post" action='/Recommendations/search'>
-		<input type="text" name="search" />
-		<input type="submit" value="Search!" />
-		</form>
+		<?php $this->view('shared/search'); ?>
 		
 		<?php 
 			foreach ($data as $recommended) {
