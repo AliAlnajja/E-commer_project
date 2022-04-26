@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/noReposition.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
-	<link rel="stylesheet" type="text/css" href="/app/styles/buttons.css">
+	<link rel="stylesheet" type="text/css" href="/app/styles/linkbuttons.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/items.css">
 	
 	<title>Wishlist</title>
