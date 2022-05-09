@@ -2,6 +2,7 @@
 	//TODO: more initialization goes in this file
 	session_start();
 	require_once('app/core/autoload.php');
+	require_once('app/core/phpqrcode/qrlib.php');
 
 	// phpinfo();
 // 	[mail function]
