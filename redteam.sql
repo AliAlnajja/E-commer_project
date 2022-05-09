@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2022 at 10:55 PM
+-- Generation Time: May 09, 2022 at 05:41 PM
 -- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.1
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -54,15 +54,11 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`item_id`, `name`, `stock`, `price`, `category`, `rating`, `image`) VALUES
-(1, 'Chicken breast', 100, 5.45, 'Meat', 4, 'chicken-breast.jpg'),
-(2, 'Chicken drumsticks', 55, 3.29, 'Meat', 5, 'chicken-drumstick.jpg'),
-(3, 'Chicken thighs', 68, 3.44, 'Meat', 4, 'chicken-thighs.jpg'),
-(4, 'Broccoli', 200, 1.33, 'Vegetable', 3, 'broccoli.jpg'),
-(5, 'Tomatoes', 30, 0.99, 'Vegetable', 4, 'tomatoes.jpg'),
-(6, 'Pet rock', 400, 69.99, 'Useless', 1, 'pet-rock.jpg'),
-(7, 'Canned bread', 4, 4.19, 'Baked', 4, 'canned-bread.jpg'),
-(9, 'Hans the hand', 2, 9999.99, 'Useless', 0, 'hans.jpg'),
-(11, 'amogus', 1, 0.01, 'Useless', 5, 'amogus.jpg');
+(1, 'Chicken breast', 100, 5, 'Meat', 5, 'chicken-breast.jpg'),
+(2, 'Chicken drumsticks', 55, 2, 'Meat', 5, 'chicken-drumstick.jpg'),
+(3, 'Chicken thighs', 68, 3, 'Meat', 4, 'chicken-thighs.jpg'),
+(4, 'Broccoli', 200, 4, 'Vegetable', 3, 'broccoli.jpg'),
+(5, 'Tomatoes', 30, 2, 'Vegetable', 4, 'tomatoes.jpg');
 
 -- --------------------------------------------------------
 
@@ -72,18 +68,8 @@ INSERT INTO `items` (`item_id`, `name`, `stock`, `price`, `category`, `rating`, 
 
 CREATE TABLE `newsletter` (
   `newsletter_id` int(11) NOT NULL,
-  `first_name` varchar(50) NOT NULL,
-  `last_name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `phone` varchar(25) NOT NULL
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `newsletter`
---
-
-INSERT INTO `newsletter` (`newsletter_id`, `first_name`, `last_name`, `email`, `phone`) VALUES
-(1, 'Ali', 'Alnajjar', 'Ali.nj.95@hotmail.com', '5147815558');
 
 -- --------------------------------------------------------
 
@@ -157,6 +143,13 @@ CREATE TABLE `sales_details` (
   `price` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `sales_details`
+--
+
+INSERT INTO `sales_details` (`sales_details_id`, `item_id`, `quantity`, `price`) VALUES
+(32, 1, 1, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -179,17 +172,17 @@ CREATE TABLE `user` (
   `username` varchar(32) NOT NULL,
   `password_hash` varchar(63) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `address` varchar(64) NOT NULL
+  `address` varchar(64) NOT NULL,
+  `secret_key` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `username`, `password_hash`, `email`, `address`) VALUES
-(1, 'valeto', '$2y$10$QnKmx80h3sqO5IG2OpCWl.Z8ikCGYcMYy1o9pr9tXxCnwic3fmM1m', '', ''),
-(6, 'doge', '$2y$10$nhnmykGeJwuNGPv4V1/Hr.Jz/mqfrypK44twNbID96DiLrcW6Lrs.', 'doge@gmail.com', '23 jump street'),
-(7, 'doge2', '$2y$10$AejdnuugjtB05Q3QOheIGe3zSSOYK9B2ZCCUhKZyHpVxHJQxBmd7e', 'doge@gmail.com', '22 Fuck Street');
+INSERT INTO `user` (`user_id`, `username`, `password_hash`, `email`, `address`, `secret_key`) VALUES
+(1, 'valeto', '$2y$10$QnKmx80h3sqO5IG2OpCWl.Z8ikCGYcMYy1o9pr9tXxCnwic3fmM1m', '', '', ''),
+(4, 'lol123', '$2y$10$b5MN.XUNilX7KK0A0q/YRubdzmppzP/3Xo/Oa31FKLrZJQKyzCP5e', 'defwefw@gmail.com', 'edfsadfsdf', 'X64YZZ2QDAZJCVUI');
 
 -- --------------------------------------------------------
 
@@ -203,6 +196,14 @@ CREATE TABLE `wishlist` (
   `item_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `wishlist`
+--
+
+INSERT INTO `wishlist` (`wishlist_id`, `user_id`, `item_id`, `quantity`) VALUES
+(1, 4, 1, 1),
+(2, 4, 2, 1);
 
 --
 -- Indexes for dumped tables
@@ -226,7 +227,7 @@ ALTER TABLE `items`
 --
 ALTER TABLE `newsletter`
   ADD PRIMARY KEY (`newsletter_id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD KEY `newsletter_user_id_fk` (`user_id`);
 
 --
 -- Indexes for table `recommendations`
@@ -277,7 +278,8 @@ ALTER TABLE `trendings`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`),
-  ADD UNIQUE KEY `username` (`username`);
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `wishlist`
@@ -301,13 +303,13 @@ ALTER TABLE `discounts`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `newsletter`
 --
 ALTER TABLE `newsletter`
-  MODIFY `newsletter_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `newsletter_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `recommendations`
@@ -337,7 +339,7 @@ ALTER TABLE `sales_amount`
 -- AUTO_INCREMENT for table `sales_details`
 --
 ALTER TABLE `sales_details`
-  MODIFY `sales_details_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `sales_details_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `trendings`
@@ -349,13 +351,13 @@ ALTER TABLE `trendings`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -366,6 +368,12 @@ ALTER TABLE `wishlist`
 --
 ALTER TABLE `discounts`
   ADD CONSTRAINT `disounts_item_id_fk` FOREIGN KEY (`item_id`) REFERENCES `items` (`item_id`);
+
+--
+-- Constraints for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD CONSTRAINT `newsletter_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 
 --
 -- Constraints for table `recommendations`
@@ -404,6 +412,13 @@ ALTER TABLE `sales_details`
 --
 ALTER TABLE `trendings`
   ADD CONSTRAINT `trendings_sales_amount_id_fk` FOREIGN KEY (`sales_amount_id`) REFERENCES `sales_amount` (`sales_amount_id`);
+
+--
+-- Constraints for table `wishlist`
+--
+ALTER TABLE `wishlist`
+  ADD CONSTRAINT `wishlist_item_id_fk` FOREIGN KEY (`item_id`) REFERENCES `items` (`item_id`),
+  ADD CONSTRAINT `wishlist_user_id_fk` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

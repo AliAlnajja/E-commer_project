@@ -75,4 +75,10 @@ class User extends \app\core\Model {
         $STMT->setFetchMode(\PDO::FETCH_CLASS, "app\models\Items");
         return $STMT->fetchAll();
     }
+    function update2fa() {
+		$SQL = 'UPDATE user SET secret_key = :secret_key WHERE user_id = :user_id';
+		$STMT = self::$_connection->prepare($SQL);
+		$STMT->execute(['secret_key'=>$this->secret_key,'user_id'=>$this->user_id]);
+	}
+
 }
