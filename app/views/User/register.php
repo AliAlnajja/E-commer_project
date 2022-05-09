@@ -8,25 +8,25 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	
-	<title>Register</title>
+	<title><?= _("Register") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 	
-		<h1>Register</h1>
+		<h1><?= _("Register") ?></h1>
 		
 		<form method='post' action=''>
-			<label class='form-label'>Username:<input type='text' required='required' name='username' class='form-control' /></label><br>
-			<label class='form-label'>Email:<input type='email' required='required' name='email' class='form-control' /></label><br>
-			<label class='form-label'>Address<input type='text' name='address' class='form-control' /></label><br>
-			<label class='form-label'>Password:<input type='password' required='required' name='password' class='form-control' /></label><br>
-			<label class='form-label'>Password confirmation:<input type='password' required='required' name='password_confirm' class='form-control' /></label><br>
+			<label class='form-label'><?= _("Username:") ?><input type='text' required='required' name='username' class='form-control' /></label><br>
+			<label class='form-label'><?= _("Email:") ?><input type='email' required='required' name='email' class='form-control' /></label><br>
+			<label class='form-label'><?= _("Address:") ?><input type='text' name='address' class='form-control' /></label><br>
+			<label class='form-label'><?= _("Password:") ?><input type='password' required='required' name='password' class='form-control' /></label><br>
+			<label class='form-label'><?= _("Password confirmation:") ?><input type='password' required='required' name='password_confirm' class='form-control' /></label><br>
 			<input type="submit" name='action' value='Register' class='form-control' />
 		</form>
 		
-		<p>Already have an account? <a href="/User/login">Login here.</a></p>
+		<p><?= _("Already have an account? ") ?><a href="/User/login"><?= _("Login here.") ?></a></p>
 		
 		<?php $this->view('shared/toTop'); ?>
 	</div>

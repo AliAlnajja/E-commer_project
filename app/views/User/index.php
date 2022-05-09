@@ -8,17 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	
-	<title>Account</title>
+	<title><?= _("Account") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Account</h1>
+		<h1><?= _("Account") ?></h1>
 		
 		<table>
-			<tr><th>Username&emsp;</th> <th>Email</th> <th>&emsp;Address</th></tr>
+			<tr><th><?= _("Username") ?>&emsp;</th> <th><?= _("Email") ?></th> <th>&emsp;<?= _("Address") ?></th></tr>
 			<?php 
 				echo "<td>$data->username</td> <td>$data->email</td> <td>&emsp;$data->address</td>";
 			?>
@@ -27,11 +27,11 @@
 		<br>
 		
 		<?php 
-			echo "<a href='/User/update_details'>Update details</a>&emsp;";
-			echo "<a href='/User/update_password'>Update password</a>&emsp;";
-			echo "<a href='/User/remove_address'>Remove address</a>&emsp;";
+			echo "<a href='/User/update_details'>" . _("Update details") . "</a>&emsp;";
+			echo "<a href='/User/update_password'>" . _("Update password") . "</a>&emsp;";
+			echo "<a href='/User/remove_address'>" . _("Remove address") . "</a>&emsp;";
 		?>
-		
+
 		<?php $this->view('shared/toTop'); ?>
 	</div>
 </body>

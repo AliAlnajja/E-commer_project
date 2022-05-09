@@ -8,19 +8,19 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	
-	<title>Account</title>
+	<title><?= _("Account") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 
-		<h1>Update details</h1>
+		<h1><?= _("Update details") ?></h1>
 		
 		<form method='post' action=''>
-			<label class='form-label'>Username:<input type='text' name='username' required='required' class='form-control' value='<?= $data->username?>' /></label> <br>
-			<label class='form-label'>Email:<input type='text' name='email' required='required' class='form-control' value='<?= $data->email?>' /></label> <br>
-			<label class='form-label'>Address:<input type='text' name='address' class='form-control' value='<?= $data->address?>' /></label> <br>
+			<label class='form-label'><?= _("Username:") ?><input type='text' name='username' required='required' class='form-control' value='<?= $data->username?>' /></label> <br>
+			<label class='form-label'><?= _("Email:") ?><input type='text' name='email' required='required' class='form-control' value='<?= $data->email?>' /></label> <br>
+			<label class='form-label'><?= _("Address:") ?><input type='text' name='address' class='form-control' value='<?= $data->address?>' /></label> <br>
 			<input type="submit" name='action' value='Update' class='form-control' />
 		</form>
 		

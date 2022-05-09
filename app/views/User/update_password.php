@@ -8,18 +8,18 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	
-	<title>Account</title>
+	<title><?= _("Account") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 
-		<h1>Update password</h1>
+		<h1><?= _("Update password") ?></h1>
 		<form method='post' action=''>
-			<label class='form-label'>Old password:<input type='password' name='oldPassword' required='required' class='form-control' /></label> <br>
-			<label class='form-label'>New password:<input type='password' name='newPassword' required='required' class='form-control' /></label> <br>
-			<label class='form-label'>Confirm new password:<input type='password' name='confirm' required='required' class='form-control' /></label> <br>
+			<label class='form-label'><?= _("Old password:") ?><input type='password' name='oldPassword' required='required' class='form-control' /></label> <br>
+			<label class='form-label'><?= _("New password:") ?><input type='password' name='newPassword' required='required' class='form-control' /></label> <br>
+			<label class='form-label'><?= _("Confirm new password:") ?><input type='password' name='confirm' required='required' class='form-control' /></label> <br>
 			<input type="submit" name='action' value='Update' class='form-control' />
 		</form>
 		

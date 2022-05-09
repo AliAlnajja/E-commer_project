@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-09 16:10-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: app/views/Contact/index.php:12
+msgid "Contact"
+msgstr ""
+
+#: app/views/Contact/index.php:19
+msgid "Contact us"
+msgstr ""
+
+#: app/views/Contact/index.php:25
+msgid "Your Name"
+msgstr ""
+
+#: app/views/Contact/index.php:30
+msgid "Your E-mail"
+msgstr ""
+
+#: app/views/Contact/index.php:35
+msgid "Choose Concerned Department"
+msgstr ""
+
+#: app/views/Contact/index.php:38
+msgid "Select a Department"
+msgstr ""
+
+#: app/views/Contact/index.php:39
+msgid "Billing"
+msgstr ""
+
+#: app/views/Contact/index.php:40
+msgid "Marketing"
+msgstr ""
+
+#: app/views/Contact/index.php:41
+msgid "Technical Support"
+msgstr ""
+
+#: app/views/Contact/index.php:46
+msgid "Reason For Contacting Us"
+msgstr ""
+
+#: app/views/Contact/index.php:51
+msgid "Write your message"
+msgstr ""
+
+#: app/views/Contact/index.php:55
+msgid "Send Message"
+msgstr ""
+
+#: app/views/Items/checkOut.php:12
+msgid "Order confirmation"
+msgstr ""
+
+#: app/views/Items/checkOut.php:23
+msgid "Your order has been placed!"
+msgstr ""
+
+#: app/views/Items/checkOut.php:24
+msgid "Return to main page"
+msgstr ""
+
+#: app/views/Items/Index.php:14 app/views/Items/Index.php:21
+#: app/views/shared/header.php:7
+msgid "Browse"
+msgstr ""
+
+#: app/views/Items/Index.php:29 app/views/Items/Index.php:30
+msgid "All"
+msgstr ""
+
+#: app/views/Items/Index.php:29
+msgid "Price"
+msgstr ""
+
+#: app/views/Items/Index.php:29
+msgid "Alphabetically"
+msgstr ""
+
+#: app/views/Items/Index.php:29
+msgid "Reviews"
+msgstr ""
+
+#: app/views/Items/Index.php:29
+msgid "Ratings"
+msgstr ""
+
+#: app/views/Items/Index.php:29
+msgid "Categories"
+msgstr ""
+
+#: app/views/Items/Index.php:32 app/views/Items/Index.php:38
+msgid "Lowest First"
+msgstr ""
+
+#: app/views/Items/Index.php:33 app/views/Items/Index.php:39
+msgid "Highest First"
+msgstr ""
+
+#: app/views/Items/Index.php:35
+msgid "0 - Z"
+msgstr ""
+
+#: app/views/Items/Index.php:36
+msgid "Z - 0"
+msgstr ""
+
+#: app/views/Items/Index.php:41
+msgid "Lowly Rated"
+msgstr ""
+
+#: app/views/Items/Index.php:42
+msgid "Highly Rated"
+msgstr ""
+
+#: app/views/Items/Index.php:44
+msgid "Meats"
+msgstr ""
+
+#: app/views/Items/Index.php:45
+msgid "Vegetables"
+msgstr ""
+
+#: app/views/Items/Index.php:47
+msgid "Baked"
+msgstr ""
+
+#: app/views/Items/Index.php:48
+msgid "Useless"
+msgstr ""
+
+#: app/views/Items/Index.php:50 app/views/Items/Index.php:51
+msgid "Future"
+msgstr ""
+
+#: app/views/Items/Index.php:60 app/views/Recommendations/Index.php:32
+#: app/views/Sales_Details/index.php:36
+msgid "Price: "
+msgstr ""
+
+#: app/views/Items/Index.php:60 app/views/Recommendations/Index.php:32
+#: app/views/Sales_Details/index.php:37
+msgid "Category: "
+msgstr ""
+
+#: app/views/Items/Index.php:61 app/views/Recommendations/Index.php:33
+msgid "Rating: "
+msgstr ""
+
+#: app/views/Items/Index.php:61 app/views/Recommendations/Index.php:33
+msgid "Stock: "
+msgstr ""
+
+#: app/views/Items/Index.php:62 app/views/Recommendations/Index.php:34
+msgid "Add to cart"
+msgstr ""
+
+#: app/views/Items/Index.php:63 app/views/Recommendations/Index.php:35
+msgid "Add to wishlist"
+msgstr ""
+
+#: app/views/Main/index.php:11 app/views/Main/index.php:18
+#: app/views/shared/header.php:6
+msgid "Home"
+msgstr ""
+
+#: app/views/Main/index.php:19
+msgid "Welcome to our website"
+msgstr ""
+
+#: app/views/Main/twofasetup.php:3
+msgid "2FA Setup"
+msgstr ""
+
+#: app/views/Main/twofasetup.php:7
+msgid ""
+"Please scan the QR-code on the screen with your favorite\n"
+"Authenticator software, such as Google Authenticator. The\n"
+"authenticator software will generate codes that are valid for 30\n"
+"seconds only. Enter such a code while and submit it while it is\n"
+"still valid to confirm that the 2-factor authentication can be\n"
+"applied to your account."
+msgstr ""
+
+#: app/views/Main/twofasetup.php:14
+msgid "Current code: "
+msgstr ""
+
+#: app/views/Newsletter/index.php:12 app/views/shared/header.php:9
+msgid "Newsletter"
+msgstr ""
+
+#: app/views/Newsletter/index.php:19
+msgid "Subscribe To Our Newsletter"
+msgstr ""
+
+#: app/views/Newsletter/index.php:29
+msgid "First Name"
+msgstr ""
+
+#: app/views/Newsletter/index.php:30
+msgid "Last Name "
+msgstr ""
+
+#: app/views/Newsletter/index.php:31
+msgid "Email"
+msgstr ""
+
+#: app/views/Newsletter/index.php:32
+msgid "Phone"
+msgstr ""
+
+#: app/views/Newsletter/index.php:39
+msgid "Unsubscribe"
+msgstr ""
+
+#: app/views/Recommendations/Index.php:13
+#: app/views/Recommendations/Index.php:20 app/views/shared/header.php:8
+msgid "Recommendations"
+msgstr ""
+
+#: app/views/Sales_Details/index.php:19 app/views/Sales_Details/index.php:26
+#: app/views/shared/header.php:36
+msgid "Cart"
+msgstr ""
+
+#: app/views/Sales_Details/index.php:38
+msgid "Rating : "
+msgstr ""
+
+#: app/views/Sales_Details/index.php:39
+msgid "Delete from Cart"
+msgstr ""
+
+#: app/views/Sales_Details/index.php:58
+msgid "Subtotal"
+msgstr ""
+
+#: app/views/shared/header.php:10
+msgid "Contact Us"
+msgstr ""
+
+#: app/views/shared/header.php:21
+msgid "Register"
+msgstr ""
+
+#: app/views/shared/header.php:22
+msgid "Log in"
+msgstr ""
+
+#: app/views/shared/header.php:24
+msgid "Log out"
+msgstr ""
+
+#: app/views/shared/header.php:35
+msgid "Wishlist"
+msgstr ""
+
+#: app/views/shared/toTop.php:3
+msgid "Top"
+msgstr ""
+
+#: app/views/User/twofasetup.php:7
+msgid ""
+"Please scan the QR-code on the screen with your favorite\n"
+"        Authenticator software, such as Google Authenticator. The\n"
+"        authenticator software will generate codes that are valid for 30\n"
+"        seconds only. Enter such a code while and submit it while it is\n"
+"        still valid to confirm that the 2-factor authentication can be\n"
+"        applied to your account. You can also choose to not use a two-factor "
+"authentication setup, by clicking on the Cancel button."
+msgstr ""
+
+#: app/views/User/twofasetup.php:16
+msgid "Verify Code, I want to use 2FA"
+msgstr ""
+
+#: app/views/User/twofasetup.php:17
+msgid "Cancel, I do not want to use 2FA"
+msgstr ""
+
+#: app/views/User/validate2fa.php:10
+msgid "Please enter your secret key to log into this application:"
+msgstr ""
+
+#: app/views/User/validate2fa.php:12
+msgid "Secret key"
+msgstr ""
+
+#: app/views/User/validate2fa.php:14
+msgid "Verify key"
+msgstr ""

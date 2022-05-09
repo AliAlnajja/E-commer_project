@@ -3,11 +3,11 @@
 
 <div class="header">
 	<div class="left">
-		<a class="link" href='/Main/index'>Home</a>
-		<a class="link" href='/Items/index'>Browse</a>
-		<a class="link" href='/Recommendations/index'>Recommendations</a>
-		<a class="link" href='/Newsletter/index'>Newsletter</a>
-		<a class="link" href='/Contact/index'>Contact Us</a>
+		<a class="link" href='/Main/index'><?= _("Home") ?></a>
+		<a class="link" href='/Items/index'><?= _("Browse") ?></a>
+		<a class="link" href='/Recommendations/index'><?= _("Recommendations") ?></a>
+		<a class="link" href='/Newsletter/index'><?= _("Newsletter") ?></a>
+		<a class="link" href='/Contact/index'><?= _("Contact Us") ?></a>
 		
 		<label class="switch">
 			<input type="checkbox">
@@ -18,10 +18,10 @@
 	<div class="right">
 		<?php 
 			if (!isset($_SESSION['user_id'])) { ?>
-			<a class="link" href='/User/register'>Register</a>
-			<a class="link" href='/User/login'>Log in</a>
+			<a class="link" href='/User/register'><?= _("Register") ?></a>
+			<a class="link" href='/User/login'><?= _("Log in") ?></a>
 		<?php } else { ?>
-			<a class="link" href='/User/logout'>Log out</a>
+			<a class="link" href='/User/logout'><?= _("Log out") ?></a>
 			
 			<?php $user_id = $_SESSION['user_id']; ?> 
 			
@@ -32,8 +32,8 @@
 				echo $username;
 			?>
 			</a>
-			<a class="link" href='/Wishlist/index'>Wishlist</a>	
-			<a class="link" href='/Sales_Details/index'>Cart</a>
+			<a class="link" href='/Wishlist/index'><?= _("Wishlist") ?></a>	
+			<a class="link" href='/Sales_Details/index'><?= _("Cart") ?></a>
 			<?php } ?>	
 	</div>
 </div> 

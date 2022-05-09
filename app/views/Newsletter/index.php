@@ -9,14 +9,14 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/newsletter.css">
 	
-	<title>Newsletter</title>
+	<title><?= _("Newsletter") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Subscribe To Our Newsletter</h1>
+		<h1><?= _("Subscribe To Our Newsletter") ?></h1>
 
 		<div class="form-cont">
 			<?php if(isset($_GET['err'])) { ?>
@@ -26,17 +26,17 @@
 			<?php } ?>
 			
 			<form method="post" action='/Newsletter/create'>
-				<label>First Name <input type="text" name="first_name" required class="form-control mt-2"></label>
-				<label>Last Name <input type="text" name="last_name" required class="form-control mt-2"></label>
-				<label>Email<input type="email" name="email" required class="form-control mt-2"></label>
-				<label>Phone<input type="text" name="phone" class="form-control mt-2"></label>
+				<label><?= _("First Name") ?> <input type="text" name="first_name" required class="form-control mt-2"></label>
+				<label><?= _("Last Name ") ?><input type="text" name="last_name" required class="form-control mt-2"></label>
+				<label><?= _("Email") ?><input type="email" name="email" required class="form-control mt-2"></label>
+				<label><?= _("Phone") ?><input type="text" name="phone" class="form-control mt-2"></label>
 				<br>
 
 				<input type="submit" name="action" value="Subscribe" class="btn btn-info mt-2 btn-block">
 				
 				<?php 
 					foreach ($data as $subscribers) {
-						echo "<tr><td><a href='/Newsletter/delete/$subscribers->newsletter_id'delete class= 'btn btn-info mt-2 btn block'>Unsubscribe</a></td><tr>";
+						echo "<tr><td><a href='/Newsletter/delete/$subscribers->newsletter_id'delete class= 'btn btn-info mt-2 btn block'>" . _("Unsubscribe") . "</a></td><tr>";
 					}
 				?>
 			</form>		

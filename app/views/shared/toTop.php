@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="/app/styles/toTop.css">
 
-<button onclick="toTop()" id="topButton" title="Go to top">Top</button>
+<button onclick="toTop()" id="topButton" title="Go to top"><?= _("Top") ?></button>
 
 <script>
 button = document.getElementById("topButton");

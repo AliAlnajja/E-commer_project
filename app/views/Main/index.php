@@ -8,15 +8,27 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	
-	<title>Home</title>
+	<title><?= _("Home") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Home</h1>
-		<p>Welcome to our website</p>	
+		<h1><?= _("Home") ?></h1>
+		<p><?= _("Welcome to our website") ?></p>	
+		
+		<br>
+
+		<h4><?= _("Languages: ") ?></h4>
+		<ul>
+		<?php
+			global $localizations;
+			foreach ($localizations as $locale) {
+				echo "<li><a href='?lang=$locale'>".\Locale::getDisplayName($locale, $locale).'</a></li>';
+			}
+		?>
+		</ul>
 		
 		<?php $this->view('shared/toTop'); ?>
 	</div>

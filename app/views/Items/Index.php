@@ -11,44 +11,44 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/linkbuttons.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/filters.css">
 	
-	<title>Browse</title>
+	<title><?= _("Browse") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Browse</h1>
+		<h1><?= _("Browse") ?></h1>
 		
 		<form method="post" action='/Items/search'>
 		<input type="text" name="search" />
-		<input type="submit" value="Search!" />
+		<input type="submit" value="Search" />
 		</form>
 		
 		<table>
-			<tr><th>All</th> <th>&emsp;Price</th> <th>&emsp;Alphabetically</th> <th>&emsp;Reviews</th> <th>&emsp;Ratings</th> <th>&emsp;Categories</th></tr>
-			<td><label><a href='/Items/all' class='filter'>All</a></label></td>
+			<tr><th><?= _("All") ?></th> <th>&emsp;<?= _("Price") ?></th> <th>&emsp;<?= _("Alphabetically") ?></th> <th>&emsp;<?= _("Reviews") ?></th> <th>&emsp;<?= _("Ratings") ?></th> <th>&emsp;<?= _("Categories") ?></th></tr>
+			<td><label><a href='/Items/all' class='filter'><?= _("All") ?></a></label></td>
 				
-			<td>&emsp;<label><a href='/Items/lowPrice' class='filter'>Lowest First</label><br>
-			<label>&emsp;<a href='/Items/highPrice' class='filter'>Highest First</label></td>
+			<td>&emsp;<label><a href='/Items/lowPrice' class='filter'><?= _("Lowest First") ?></label><br>
+			<label>&emsp;<a href='/Items/highPrice' class='filter'><?= _("Highest First") ?></label></td>
 				
-			<td>&emsp;<label><a href='/Items/ascending' class='filter'>0 - Z</label><br>
-			<label>&emsp;<a href='/Items/descending' class='filter'>Z - 0</label></td>
+			<td>&emsp;<label><a href='/Items/ascending' class='filter'><?= _("0 - Z") ?></label><br>
+			<label>&emsp;<a href='/Items/descending' class='filter'><?= _("Z - 0") ?></label></td>
 				
-			<td><label>&emsp;<a href='/Items/lowReview' class='filter'>Lowest First</label><br>
-			<label>&emsp;<a href='/Items/highReview' class='filter'>Highest First</label></td>
+			<td><label>&emsp;<a href='/Items/lowReview' class='filter'><?= _("Lowest First") ?></label><br>
+			<label>&emsp;<a href='/Items/highReview' class='filter'><?= _("Highest First") ?></label></td>
 				
-			<td><label>&emsp;<a href='/Items/lowRating' class='filter'>Lowly Rated</label><br>
-			<label>&emsp;<a href='/Items/highRating' class='filter'>Highly Rated</label></td>
+			<td><label>&emsp;<a href='/Items/lowRating' class='filter'><?= _("Lowly Rated") ?></label><br>
+			<label>&emsp;<a href='/Items/highRating' class='filter'><?= _("Highly Rated") ?></label></td>
 				
-			<td><label>&emsp;<a href='/Items/cateMeat' class='filter'>Meats</label><br>
-			<label>&emsp;<a href='/Items/cateVegetable' class='filter'>Vegetables</label></td>
+			<td><label>&emsp;<a href='/Items/cateMeat' class='filter'><?= _("Meats") ?></label><br>
+			<label>&emsp;<a href='/Items/cateVegetable' class='filter'><?= _("Vegetables") ?></label></td>
 			
-			<td><label>&emsp;<a href='/Items/cateBaked' class='filter'>Baked</label><br>
-			<label>&emsp;<a href='/Items/cateUseless' class='filter'>Useless</label></td>
+			<td><label>&emsp;<a href='/Items/cateBaked' class='filter'><?= _("Baked") ?></label><br>
+			<label>&emsp;<a href='/Items/cateUseless' class='filter'><?= _("Useless") ?></label></td>
 			
-			<td><label>&emsp;<a href='/Items/index' class='filter'>Future</label><br>
-			<label>&emsp;<a href='/Items/index' class='filter'>Future</label></td>
+			<td><label>&emsp;<a href='/Items/index' class='filter'><?= _("Future") ?></label><br>
+			<label>&emsp;<a href='/Items/index' class='filter'><?= _("Future") ?></label></td>
 		</table><br>
 		
 		<?php 
@@ -57,10 +57,10 @@
 					<div class='item'>
 						<img src='/images/$items->image' align='left'>
 						<h3>$items->name</h3>
-						<h5>Price: $items->price$&emsp;Category: $items->category</h5>
-						<h5>Rating: $items->rating&emsp;Stock: $items->stock</h5>
-						<a href=/Items/addToCart?item_id=$items->item_id&price=$items->price'addToCart class='linkbutton' id='buy'>Add to cart</a>
-						<a href='addToWishList?item_id=$items->item_id'addToWishlist class='linkbutton'>Add to wishlist</a>
+						<h5>" . _("Price: ") . "$items->price$&emsp;" . _("Category: ") . "$items->category</h5>
+						<h5>" . _("Rating: ") . "$items->rating&emsp;" . _("Stock: ") . "$items->stock</h5>
+						<a href=/Items/addToCart?item_id=$items->item_id&price=$items->price'addToCart class='linkbutton' id='buy'>" . _("Add to cart") . "</a>
+						<a href='addToWishList?item_id=$items->item_id'addToWishlist class='linkbutton'>" . _("Add to wishlist") . "</a>
 					</div> <br>";
 			}
 		?>

@@ -10,14 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/linkbuttons.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/items.css">
 	
-	<title>Wishlist</title>
+	<title><?= _("Wishlist") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Wishlist</h1>
+		<h1><?= _("Wishlist") ?></h1>
 		<br>
 
 		<?php 
@@ -28,10 +28,10 @@
 					<div class='item'>
 						<img src='/images/$item->image' align='left'/>
 						<h3>$item->name</h3>
-						<h5>Price: $item->price$&emsp; Category: $item->category</h5>
-						<h5>Rating: $item->rating&emsp;Stock: $item->stock</h5>					
-						<a href=/Items/addToCart?item_id=$item->item_id' addToCart class ='linkbutton' id ='buy'>Add to cart</a>
-						<a href='/Items/deleteFromWishList?item_id=$item->item_id'deleteFromWishlist class='linkbutton'>Delete from wishlist</a>
+						<h5>" . _("Price: ") . "$item->price$&emsp;" . _("Category: ") . "$item->category</h5>
+						<h5>" . _("Rating: ") . "$item->rating&emsp;" . _("Stock: ") . "$item->stock</h5>					
+						<a href=/Items/addToCart?item_id=$item->item_id' addToCart class ='linkbutton' id ='buy'>" . _("Add to cart") . "</a>
+						<a href='/Items/deleteFromWishList?item_id=$item->item_id'deleteFromWishlist class='linkbutton'>" . _("Delete from wishlist") . "</a>
 					</div>";
 				}
 			?>

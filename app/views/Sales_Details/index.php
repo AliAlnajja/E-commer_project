@@ -16,14 +16,14 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/linkbuttons.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/cart.css">
 	
-	<title>Cart</title>
+	<title><?= _("Cart") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Cart</h1>
+		<h1><?= _("Cart") ?></h1>
 		
 		<?php 
 			foreach ($data as $cart) {
@@ -33,10 +33,10 @@
 					<div class='itemsContainer'>
 						<img src='/images/$item->image' width='128' height='128'/>
 					<p style='font-size:150%;' class='itemName'>$item->name</p>
-					<p>Price: $item->price$</p>
-					<p>Category: $item->category</p>
-					<p>Rating : $item->rating</p>
-					<a href='/Items/deleteFromCart?item_id=$item->item_id'deleteFromCart class='linkbutton' id='delete'> Delete from Cart</a>
+					<p>" . _("Price: ") . "$item->price$</p>
+					<p>" . _("Category: ") . "$item->category</p>
+					<p>" . _("Rating : ") . "$item->rating</p>
+					<a href='/Items/deleteFromCart?item_id=$item->item_id'deleteFromCart class='linkbutton' id='delete'>" . _("Delete from Cart") . "</a>
 					</div>";
 			}
 		?>
@@ -55,7 +55,7 @@
 			if($sum != 0){
 				echo "<script> enableCheckoutBtn(); </script>";
 			}
-			echo "<p style='text-align:right;'>Subtotal = $sum $ </p>";
+			echo "<p style='text-align:right;'>" . _("Subtotal") . " = $sum $ </p>";
 		?>
 		
 		<?php $this->view('shared/toTop'); ?>

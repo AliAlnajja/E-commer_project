@@ -8,22 +8,22 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	
-	<title>Login</title>
+	<title><?= _("Login") ?></title>
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Login</h1>
+		<h1><?= _("Login") ?></h1>
 		
 		<form method='post' action=''>
-			<label class='form-label'>Username:<input type='text' name='username' class='form-control' /></label><br>
-			<label class='form-label'>Password:<input type='password' name='password' class='form-control' /></label><br>
+			<label class='form-label'><?= _("Username: ") ?><input type='text' name='username' class='form-control' /></label><br>
+			<label class='form-label'><?= _("Password: ") ?><input type='password' name='password' class='form-control' /></label><br>
 			<input type="submit" name='action' value='Login' class='form-control' />
 		</form>
 		
-		<p>No account? <a href="/User/register">Register here.</a></p>
+		<p><?= _("No account? ") ?><a href="/User/register"><?= _("Register here.") ?></a></p>
 		
 		<?php $this->view('shared/toTop'); ?>
 	</div>

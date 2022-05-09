@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/checkout.css">
 	
-	<title>Order confirmation</title>
+	<title><?= _("Order confirmation") ?></title>
 </head>
 
 <body>
@@ -20,8 +20,8 @@
 	<br>
 
 	<img src="\images\checkmark.png" class="center">
-	<center><p>Your order has been placed!</p></center>
-	<center><a href="/Main/index">Return to main page</center>
+	<center><p><?= _("Your order has been placed!") ?></p></center>
+	<center><a href="/Main/index"><?= _("Return to main page") ?></center>
 </body>
 
 </html>

@@ -10,18 +10,18 @@
 	<link rel="stylesheet" type="text/css" href="/app/styles/items.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/linkbuttons.css">
 	
-	<title>Recommendations</title>	
+	<title><?= _("Recommendations") ?></title>	
 </head>
 
 <body>
 	<div class='container'>
 		<?php $this->view('shared/header'); ?>
 		
-		<h1>Recommendations</h1>	
+		<h1><?= _("Recommendations") ?></h1>	
 
 		<form method="post" action='/Recommendations/search'>
 		<input type="text" name="search" />
-		<input type="submit" value="Search!" />
+		<input type="submit" value="Search" />
 		</form>
 		
 		<?php 
@@ -29,10 +29,10 @@
 				echo "<div class='item'>
 						<img src='/images/$recommended->image' align='left'>
 						<h3>$recommended->name</h3>
-						<h5>Price: $recommended->price$&emsp; Category: $recommended->category</h5>
-						<h5>Rating: $recommended->rating&emsp;Stock: $recommended->stock</h5>
-						<a href=/Items/addToCart?item_id=$recommended->item_id&price=$recommended->price' addToCart class='linkbutton' id ='buy'>Add to cart</a>
-						<a href='addToWishList?item_id=$recommended->item_id'addToWishlist class='linkbutton'>Add to wishlist</a>
+						<h5>" . _("Price: ") . "$recommended->price$&emsp; " . _("Category: ") . "$recommended->category</h5>
+						<h5>" . _("Rating: ") . "$recommended->rating&emsp;" . _("Stock: ") . "$recommended->stock</h5>
+						<a href=/Items/addToCart?item_id=$recommended->item_id&price=$recommended->price' addToCart class='linkbutton' id ='buy'>" . _("Add to cart") . "</a>
+						<a href='addToWishList?item_id=$recommended->item_id'addToWishlist class='linkbutton'>" . _("Add to wishlist") . "</a>
 					</div> <br>";
 			}
 		?>

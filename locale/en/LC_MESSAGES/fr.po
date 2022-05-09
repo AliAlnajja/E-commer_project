@@ -1,0 +1,334 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-09 16:53-0400\n"
+"PO-Revision-Date: 2022-05-09 16:56-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: app/views/Contact/index.php:12
+msgid "Contact"
+msgstr "Contact"
+
+#: app/views/Contact/index.php:19
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: app/views/Contact/index.php:25
+msgid "Your Name"
+msgstr "Votre nom"
+
+#: app/views/Contact/index.php:30
+msgid "Your E-mail"
+msgstr "Votre E-mail"
+
+#: app/views/Contact/index.php:35
+msgid "Choose Concerned Department"
+msgstr "Choisissez le département concerné"
+
+#: app/views/Contact/index.php:38
+msgid "Select a Department"
+msgstr "Sélectionnez une catégorie"
+
+#: app/views/Contact/index.php:39
+msgid "Billing"
+msgstr "Facturation"
+
+#: app/views/Contact/index.php:40
+msgid "Marketing"
+msgstr "Marketing"
+
+#: app/views/Contact/index.php:41
+msgid "Technical Support"
+msgstr "Support technique et services professionnels"
+
+#: app/views/Contact/index.php:46
+msgid "Reason For Contacting Us"
+msgstr "Raison de nous contacter"
+
+#: app/views/Contact/index.php:51
+msgid "Write your message"
+msgstr "Écrivez votre message"
+
+#: app/views/Contact/index.php:55
+msgid "Send Message"
+msgstr "Envoyer le message"
+
+#: app/views/Items/Index.php:14 app/views/Items/Index.php:21
+msgid "Browse"
+msgstr "Naviguer"
+
+#: app/views/Items/Index.php:29 app/views/Items/Index.php:30
+msgid "All"
+msgstr "Tous"
+
+#: app/views/Items/Index.php:29
+msgid "Price"
+msgstr "Prix"
+
+#: app/views/Items/Index.php:29
+msgid "Alphabetically"
+msgstr "Alphabétiquement"
+
+#: app/views/Items/Index.php:29
+msgid "Reviews"
+msgstr "Commentaires"
+
+#: app/views/Items/Index.php:29
+msgid "Ratings"
+msgstr "Évaluations"
+
+#: app/views/Items/Index.php:29
+msgid "Categories"
+msgstr "Catégories"
+
+#: app/views/Items/Index.php:32 app/views/Items/Index.php:38
+msgid "Lowest First"
+msgstr "Peu coûteux"
+
+#: app/views/Items/Index.php:33 app/views/Items/Index.php:39
+msgid "Highest First"
+msgstr "Coûteux"
+
+#: app/views/Items/Index.php:35
+msgid "0 - Z"
+msgstr "0 - Z"
+
+#: app/views/Items/Index.php:36
+msgid "Z - 0"
+msgstr "Z - 0"
+
+#: app/views/Items/Index.php:41
+msgid "Lowly Rated"
+msgstr "Mauvais"
+
+#: app/views/Items/Index.php:42
+msgid "Highly Rated"
+msgstr "Bon"
+
+#: app/views/Items/Index.php:44
+msgid "Meats"
+msgstr "Viandes"
+
+#: app/views/Items/Index.php:45
+msgid "Vegetables"
+msgstr "Légumes"
+
+#: app/views/Items/Index.php:47
+msgid "Baked"
+msgstr "Produits de boulangerie"
+
+#: app/views/Items/Index.php:48
+msgid "Useless"
+msgstr "Inutile"
+
+#: app/views/Items/Index.php:50 app/views/Items/Index.php:51
+msgid "Future"
+msgstr "Futur"
+
+#: app/views/Items/Index.php:60 app/views/Recommendations/Index.php:32
+#: app/views/Sales_Details/index.php:36 app/views/Wishlist/index.php:31
+msgid "Price: "
+msgstr "Prix : "
+
+#: app/views/Items/Index.php:60 app/views/Recommendations/Index.php:32
+#: app/views/Sales_Details/index.php:37 app/views/Wishlist/index.php:31
+msgid "Category: "
+msgstr "Catégorie : "
+
+#: app/views/Items/Index.php:61 app/views/Recommendations/Index.php:33
+#: app/views/Wishlist/index.php:32
+msgid "Rating: "
+msgstr "Évaluation : "
+
+#: app/views/Items/Index.php:61 app/views/Recommendations/Index.php:33
+#: app/views/Wishlist/index.php:32
+msgid "Stock: "
+msgstr "Stock : "
+
+#: app/views/Items/Index.php:62 app/views/Recommendations/Index.php:34
+#: app/views/Wishlist/index.php:33
+msgid "Add to cart"
+msgstr "Ajouter au panier"
+
+#: app/views/Items/Index.php:63 app/views/Recommendations/Index.php:35
+msgid "Add to wishlist"
+msgstr "Souhait"
+
+#: app/views/Main/index.php:11 app/views/Main/index.php:18
+msgid "Home"
+msgstr "Page d'accueil"
+
+#: app/views/Main/index.php:19
+msgid "Welcome to our website"
+msgstr "Bienvenue a notre site Internet"
+
+#: app/views/Main/index.php:23
+msgid "Languages: "
+msgstr "Langues : "
+
+#: app/views/Newsletter/index.php:12
+msgid "Newsletter"
+msgstr "Bulletin"
+
+#: app/views/Newsletter/index.php:19
+msgid "Subscribe To Our Newsletter"
+msgstr "Abonnez-vous à notre bulletin"
+
+#: app/views/Newsletter/index.php:29
+msgid "First Name"
+msgstr "Prénom"
+
+#: app/views/Newsletter/index.php:30
+msgid "Last Name "
+msgstr "Nom de famille "
+
+#: app/views/Newsletter/index.php:31 app/views/User/index.php:21
+msgid "Email"
+msgstr "E-mail"
+
+#: app/views/Newsletter/index.php:32
+msgid "Phone"
+msgstr "Numéro de téléphone"
+
+#: app/views/Newsletter/index.php:39
+msgid "Unsubscribe"
+msgstr "Se désabonner"
+
+#: app/views/Recommendations/Index.php:13
+#: app/views/Recommendations/Index.php:20
+msgid "Recommendations"
+msgstr "Recommandations"
+
+#: app/views/Sales_Details/index.php:19 app/views/Sales_Details/index.php:26
+msgid "Cart"
+msgstr "Panier"
+
+#: app/views/Sales_Details/index.php:38
+msgid "Rating : "
+msgstr "Évaluation : "
+
+#: app/views/Sales_Details/index.php:39
+msgid "Delete from Cart"
+msgstr "Retirer du panier"
+
+#: app/views/Sales_Details/index.php:58
+msgid "Subtotal"
+msgstr "Total"
+
+#: app/views/User/index.php:11 app/views/User/index.php:18
+msgid "Account"
+msgstr "Compte"
+
+#: app/views/User/index.php:21
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: app/views/User/index.php:21
+msgid "Address"
+msgstr "Adresse"
+
+#: app/views/User/index.php:30
+msgid "Update details"
+msgstr "Mettre à jour les détails"
+
+#: app/views/User/index.php:31
+msgid "Update password"
+msgstr "Mettre à jour le mot de passe"
+
+#: app/views/User/index.php:32
+msgid "Remove address"
+msgstr "Supprimer l'adresse"
+
+#: app/views/Wishlist/index.php:13 app/views/Wishlist/index.php:20
+msgid "Wishlist"
+msgstr "Liste de souhaits"
+
+#: app/views/Wishlist/index.php:34
+msgid "Delete from wishlist"
+msgstr "Retirer du liste de souhaite"
+
+#~ msgid "Order confirmation"
+#~ msgstr "Confirmation de commande"
+
+#~ msgid "Your order has been placed!"
+#~ msgstr "Votre commande a bien été reçue!"
+
+#~ msgid "Return to main page"
+#~ msgstr "Page de destination"
+
+#~ msgid "2FA Setup"
+#~ msgstr "Configuration 2FA"
+
+#~ msgid ""
+#~ "Please scan the QR-code on the screen with your favorite\n"
+#~ "Authenticator software, such as Google Authenticator. The\n"
+#~ "authenticator software will generate codes that are valid for 30\n"
+#~ "seconds only. Enter such a code while and submit it while it is\n"
+#~ "still valid to confirm that the 2-factor authentication can be\n"
+#~ "applied to your account."
+#~ msgstr ""
+#~ "Veuillez scanner le code QR à l'écran avec votre favori\n"
+#~ "Logiciel d'authentification, come le Google Authenticator. Le\n"
+#~ "logiciel d'authentification générera des codes valables pour 30\n"
+#~ "seulement secondes. Entrez ce code pendant cette période de grâce\n"
+#~ "et soumettez-le."
+
+#~ msgid "Current code: "
+#~ msgstr "Code actuel : "
+
+#~ msgid "Contact Us"
+#~ msgstr "Nous contacter"
+
+#~ msgid "Register"
+#~ msgstr "S'inscrire"
+
+#~ msgid "Log in"
+#~ msgstr "Se connecter"
+
+#~ msgid "Log out"
+#~ msgstr "Se déconnecter"
+
+#~ msgid "Top"
+#~ msgstr "Haut"
+
+#~ msgid ""
+#~ "Please scan the QR-code on the screen with your favorite\n"
+#~ "        Authenticator software, such as Google Authenticator. The\n"
+#~ "        authenticator software will generate codes that are valid for 30\n"
+#~ "        seconds only. Enter such a code while and submit it while it is\n"
+#~ "        still valid to confirm that the 2-factor authentication can be\n"
+#~ "        applied to your account. You can also choose to not use a two-factor authentication setup, by clicking on the Cancel button."
+#~ msgstr ""
+#~ "Veuillez scanner le code QR à l'écran avec votre favori\n"
+#~ "        Logiciel d'authentification, come le Google Authenticator. Le\n"
+#~ "        logiciel d'authentification générera des codes valables pour 30\n"
+#~ "        seulement secondes. Entrez ce code pendant cette période de grâce\n"
+#~ "        et soumettez-le."
+
+#~ msgid "Verify Code, I want to use 2FA"
+#~ msgstr "Vérifier le code, je veux utiliser 2FA"
+
+#~ msgid "Cancel, I do not want to use 2FA"
+#~ msgstr "Annuler, je ne veux pas utiliser 2FA"
+
+#~ msgid "Please enter your secret key to log into this application:"
+#~ msgstr "Entrez votre clé secrète pour vous connecter à cette application :"
+
+#~ msgid "Secret key"
+#~ msgstr "Clé secrète"
+
+#~ msgid "Verify key"
+#~ msgstr "Vérifier la clé"
