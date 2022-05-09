@@ -27,7 +27,7 @@
 		
 		<table>
 			<tr><th>All</th> <th>&emsp;Price</th> <th>&emsp;Alphabetically</th> <th>&emsp;Reviews</th> <th>&emsp;Ratings</th> <th>&emsp;Categories</th></tr>
-			<td><label><a href='/Items/all'>All</a></label></td>
+			<td><label><a href='/Items/all' class='filter'>All</a></label></td>
 				
 			<td>&emsp;<label><a href='/Items/lowPrice' class='filter'>Lowest First</label><br>
 			<label>&emsp;<a href='/Items/highPrice' class='filter'>Highest First</label></td>

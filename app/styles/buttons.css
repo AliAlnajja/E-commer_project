@@ -9,14 +9,3 @@
   	text-decoration: none;
   	display: inline-block;
 }
-
-/* Buy button */
-.button#buy {
-	background-color: #fcd703; /* Yellow */
-	font-weight: bold;
-}
-
-/* Delete from cart button */
-.button#delete {
-	background-color: #fc6203; /* Orange */
-}

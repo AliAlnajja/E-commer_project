@@ -3,17 +3,17 @@
 <head>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 	<script type="text/javascript">
 		function enableCheckoutBtn() {
 		   // Give the button an ID then enable it
 		   document.getElementById("checkoutButton").disabled = false;
 		}
 	</script>
+	
 	<link rel="stylesheet" type="text/css" href="/app/styles/noReposition.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/general.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/dark_mode.css">
-	<link rel="stylesheet" type="text/css" href="/app/styles/buttons.css">
+	<link rel="stylesheet" type="text/css" href="/app/styles/linkbuttons.css">
 	<link rel="stylesheet" type="text/css" href="/app/styles/cart.css">
 	
 	<title>Cart</title>
@@ -59,11 +59,6 @@
 		?>
 		
 		<?php $this->view('shared/toTop'); ?>
-		
-		<br>
-		<form method="post" action="/Items/checkout">
-		<input type="submit" value="Checkout" />	
-		</form>
 	</div>
 </body>
 
